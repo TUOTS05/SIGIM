@@ -10,46 +10,41 @@
    
 <?= $this->include('partials/header'); ?>
 
-   <!-- banner section start -->
-   <div class="banner-main-wrapper2 float_left">
+   <!-- banner sction start -->
+      <!-- banner section start -->
+      <div class="banner-main-wrapper2 float_left">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="container">
-                  <h4>best <span>Medical and</span></h4>
-                  <h3>Health Care Center</h3>
-                  <p>It is a long established fact that a reader will be distracted by <br> the readable content
-                     of a page when looking at its layout. The <br> point of using Lorem Ipsum.
+                  <h4>la sante <span>, enfin accessible</span></h4>
+                  <h3>Un systeme innovante qui <br>révolutionne les soins de santé.</h3>
+                  <p>"Grâce à SIGIM, obtenez les meilleurs soins de santé, où que vous soyez." <br>SIGIM vous permet d'accéder à des soins de santé de qualité, <br>de manière rapide et efficace, où que vous soyez dans le monde.
                   </p>
                   <ul>
-                     <li><a href="service.html" class="page2-btn bg-change">Learn-More</a></li>
-                     <li class="btn-color2"><a href="appoinment.html" class="page2-btn">Book Now</a></li>
+                     <li class="btn-color2"><a href="appoinment.html" class="page2-btn">Comment SIGIM peut vous aider ?</a></li>
                   </ul>
                </div>
             </div>
             <div class="carousel-item ">
-               <div class="container">
-                  <h4>best <span>Medical and</span></h4>
-                  <h3>Health Care Center</h3>
-                  <p>It is a long established fact that a reader will be distracted by <br> the readable content
-                     of a page when looking at its layout. The <br> point of using Lorem Ipsum.
-                  </p>
-                  <ul>
-                     <li><a href="service.html" class="page2-btn bg-change">Learn-More</a></li>
-                     <li class="btn-color2"><a href="appoinment.html" class="page2-btn">Book Now</a></li>
-                  </ul>
-               </div>
+            <div class="container">
+               <h4>Prise de<span> Rendez-vous</span></h4>
+               <h3>Santé, Innovation, Gain de temps</h3>
+               <p>SIGIM offre une solution innovante pour obtenir un rendez-vous avec un<br> professionnel de santé en quelques clics. Notre approche personnalisée vous permet <br> de bénéficier d'une prévention adaptée à vos besoins.
+               <ul>
+                  <li><a href="service.html" class="page2-btn">Prendre RENDEZ-VOUS</a></li>
+               </ul>
+            </div>
             </div>
             <div class="carousel-item ">
                <div class="container">
-                  <h4>best <span>Medical and</span></h4>
-                  <h3>Health Care Center</h3>
-                  <p>It is a long established fact that a reader will be distracted by <br> the readable content
-                     of a page when looking at its layout. The <br> point of using Lorem Ipsum.
-                  </p>
+                  <h4>Suivi de <span>traitement</span></h4>
+                  <h3>Avec notre système de gestion<br> d'information medicale, vous pouvez :</h3>
+                  <span style="margin-top: 10px; font-size:1em">- Consulter vos rendez-vous à venir</span><br>
+                  <span style="margin-top: 10px; font-size:1em">- Suivre vos prescriptions</span><br>
+                  <span style="margin-top: 10px; font-size:1em">- Recevoir des rappels</span>
                   <ul>
-                     <li><a href="service.html" class="page2-btn bg-change">Learn-More</a></li>
-                     <li class="btn-color2"><a href="appoinment.html" class="page2-btn">Book Now</a></li>
+                     <li class="btn-color2"><a href="appoinment.html" class="page2-btn">En savoir plus sur SIGIM ?</a></li>
                   </ul>
                </div>
             </div>
@@ -69,25 +64,23 @@
          <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-0">
                <section class="resp-margin">
-                  <div class="sb-service-section2">
+                  <div class="sb-service-section2 serve0">
                      <span class="d-inline-block"><i class="fas fa-heartbeat"></i></span>
-                     <h5>Heart</h5>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of
-                        a page when looking at its layout. The point of using Lorem Ipsum.
-                     </p>
+                     <h5>Dossier médicale</h5>
+                     <p>Historique médical <br>Antécédents familiaux <br> Examens et tests, <br>Allergies <br>Traitement en cours</p>
                   </div>
                   <div class="hover-type">
-                     <a href="service.html" class="d-inline-block w-100 text-center">View More</a>
+                     <a href="service.html" class="d-inline-block w-100 text-center">Voir mon DOSSIER</a>
                   </div>
                </section>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-0">
                <section class="resp-margin">
-                  <div class="sb-service-section2">
+                  <div class="sb-service-section2 serve1">
                      <span class="d-inline-block"><i class="fas fa-briefcase-medical"></i></span>
-                     <h5>Medical Counseling</h5>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of
-                        a page when looking at its layout. The point of using Lorem Ipsum.
+                     <h5>Conseil Medical</h5>
+                     <p>
+                        Apprenez-en plus sur des symptômes <br>Améliorer votre santé cardiaque. <br>Découvrez les différents types de traitement du cancer et leurs avantages.
                      </p>
                   </div>
                   <div class="hover-type">
@@ -97,29 +90,28 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-0">
                <section class="resp-margin">
-                  <div class="sb-service-section2">
+                  <div class="sb-service-section2 serve2">
                      <span class="d-inline-block"><i class="fas fa-notes-medical"></i></span>
-                     <h5>Qualified Doctors</h5>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of
-                        a page when looking at its layout. The point of using Lorem Ipsum.
+                     <h5>Professionnels de la santé</h5>
+                     <p>
+                        Partage de dossiers médicaux <br>Mise a jour d'un dossier <br>Accès à des informations médicales <br>Note medicale <br>Avis d'autre Medecin
                      </p>
                   </div>
                   <div class="hover-type">
-                     <a href="service.html" class="d-inline-block w-100 text-center">View More</a>
+                     <a href="service.html" class="d-inline-block w-100 text-center">Metre à jour</a>
                   </div>
                </section>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-0">
                <section class="resp-margin">
-                  <div class="sb-service-section2">
+                  <div class="sb-service-section2 serve3">
                      <span class="d-inline-block"><i class="fas fa-hospital-alt"></i></span>
-                     <h5>Emergency Services</h5>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of
-                        a page when looking at its layout. The point of using Lorem Ipsum.
+                     <h5>Rendez - Vous</h5>
+                     <p>Vous pouvez utiliser l'application SIGIM pour réserver des rendez-vous avec des professionnels de la santé quelque soit votre emplacement actuelle.
                      </p>
                   </div>
                   <div class="hover-type">
-                     <a href="service.html" class="d-inline-block w-100 text-center">View More</a>
+                     <a href="service.html" class="d-inline-block w-100 text-center">Prendre un Rendez-vous</a>
                   </div>
                </section>
             </div>
@@ -133,20 +125,15 @@
          <div class="row">
             <div class="col-lg-4 d-none d-xl-block d-lg-block">
                <div class="">
-                  <img src="asset/images/about2-img.jpg" alt="img" class="w-100">
+                  <img src="images/about2-img.jpg" alt="img" class="w-100">
                </div>
             </div>
             <div class="col-lg-8 col-md-12 col-12">
                <div class="sb-about-section">
-                  <h3>About <span>Us</span></h3>
-                  <h4>We Care For Your Health. Provide Best
-                     Medical Treatment.
+                  <h3>Apropos de <span>SIGMI</span></h3>
+                  <h4>LA SANTE AU COEUR DE NOS PREOCUPATIONS
                   </h4>
-                  <p>It is a long established fact that a reader will be distracted by the readable established
-                     fact that
-                     content of a page when looking at its layout. The point of using Lorem Ipsum established
-                     fact
-                     that a reader. The point of using Lorem Ipsum.
+                  <p>SIGIM est un système informatique de gestion des informations médicales qui révolutionne la façon dont les patients sont pris en charge. Il permet aux professionnels de la santé d'accéder aux informations dont ils ont besoin rapidement et facilement, ce qui permet de garantir une prise en charge plus précise et plus personnalisée.
                   </p>
                   <div class="counter-main">
                      <div class="count-up">
@@ -178,7 +165,7 @@
                         </div>
                         <div>
                            <h4 class="counter-count">4500</h4>
-                           <p>Happy Patients</p>
+                           <p>Patients satisfais</p>
                         </div>
                      </div>
                      <div class="count-up">
@@ -210,7 +197,7 @@
                         </div>
                         <div>
                            <h4 class="counter-count">500</h4>
-                           <p>Award win</p>
+                           <p>Récompences</p>
                         </div>
                      </div>
                      <div class="count-up">
@@ -242,7 +229,7 @@
                         </div>
                         <div>
                            <h4 class="counter-count">250</h4>
-                           <p>Hospital Rooms</p>
+                           <p>Hopitals partenaires</p>
                         </div>
                      </div>
                   </div>
@@ -255,49 +242,9 @@
    <!-- index 02 emergency section start -->
    <div class="emergency2-main-wrapper float_left">
       <div class="container-fluid">
-         <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12 col-12 p-0">
-               <div class="video-section">
-                  <!-- Button trigger modal -->
-                  <div data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                     <div class="wrapper">
-                        <div class="waves-block">
-                           <div class="waves wave-1"></div>
-                           <div class="waves wave-2"></div>
-                           <div class="waves wave-3"></div>
-                        </div>
-                     </div>
-                     <img src="images/video-icon.png" alt="img">
-                  </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                     tabindex="-1" aria-hidden="true">
-                     <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                           <button type="button" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
-                           <div class="modal-body p-0">
-                              <iframe height="315" src="https://www.youtube.com/embed/8jd9YnoekiI" title="YouTube video player"></iframe>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0">
-               <div class="sb-emergency-section">
-                  <div class="content">
-                     <span><i class="fas fa-headphones-alt"></i></span>
-                     <h4>Emergency <br> Medical Care 24/7</h4>
-                  </div>
-                  <p>With access to 24 hour emergency assistance, It’s so important you<br>
-                     can continue to help others.
-                  </p>
-                  <div class="content">
-                     <span><i class="fas fa-phone"></i></span>
-                     <h4>+888 7987542334</h4>
-                  </div>
-                  <img src="asset/images/emergency2.png " class="d-none d-md-block d-lg-block d-xl-block" alt="img">
-               </div>
+         <div class="row text-center">
+            <div class="p-0">
+               <div class="sb-emergency-section">gdgdgdgdg</div>
             </div>
          </div>
       </div>
@@ -310,47 +257,39 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="page-2-heading">
                   <h4>
-                     Our <span>Services</span>
+                     Ce que, <span>Nous vous offrons</span>
                   </h4>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-service-box mt-5">
                   <i class="fas fa-university"></i>
-                  <h6>Blood Bank</h6>
-                  <p>It is a long established fact that a reader
-                     will be distracted by the readable the
-                     content of a page when looking.
+                  <h6>Prise de rendez-vous en ligne</h6>
+                  <p>Utilisation SIGIM pour réserver des rendez-vous avec des professionnels de la santé. Cela permet de simplifier le processus de prise de rendez-vous et d'éviter les temps d'attente.
                   </p>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-service-box mt-5">
                   <i class="fas fa-stethoscope"></i>
-                  <h6>Full Stathoscope</h6>
-                  <p>It is a long established fact that a reader
-                     will be distracted by the readable the
-                     content of a page when looking.
+                  <h6>Accès à votre dossier médicale</h6>
+                  <p>Accéder à votre dossiers médicale à tout moment et de n'importe où via l'application SIGIM. Cela permet de suivre sa santé et de partager leurs informations avec leurs professionnels de la santé.
                   </p>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-service-box mt-5">
                   <i class="fas fa-heartbeat"></i>
-                  <h6>Heart Specialest</h6>
-                  <p>It is a long established fact that a reader
-                     will be distracted by the readable the
-                     content of a page when looking.
+                  <h6>Consulter vos résultats en ligne</h6>
+                  <p>Consulter vos résultats de santé à tout moment et de n'importe où, ce qui vous permet de rester informés de votre santé et de poser des questions à vos médecin si nécessaire.
                   </p>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-service-box">
                   <i class="fas fa-american-sign-language-interpreting"></i>
-                  <h6>Covid - 19</h6>
-                  <p>It is a long established fact that a reader
-                     will be distracted by the readable the
-                     content of a page when looking.
+                  <h6>Suivi de traitement en ligne</h6>
+                  <p>Rester au courant de votre santé et de votre traitement. Nous vous envoyons des notifications et des rappels pour les rendez-vous à venir, les médicaments à prendre, et plus encore.
                   </p>
                </div>
             </div>
@@ -382,9 +321,7 @@
          </div>
       </div>
    </div>
-   <!-- </div> -->
    <!-- index 02 page service section end -->
-   <!-- index 02 page team section start -->
    <div class="founder-main-wrapper float_left">
       <div class="container">
          <div class="row">
@@ -397,7 +334,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="asset/images/founder-img1.png" alt="img">
+                  <img src="images/founder-img1.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -411,7 +348,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="asset/images/founder-img2.png" alt="img">
+                  <img src="images/founder-img2.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -425,7 +362,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="asset/images/founder-img3.png" alt="img">
+                  <img src="images/founder-img3.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -466,11 +403,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img1.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img1.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img1.jpg" title="image3" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img1.jpg" title="image3" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -480,11 +417,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img2.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img2.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img2.jpg" title="image4" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img2.jpg" title="image4" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -494,11 +431,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img3.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img3.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img3.jpg" title="image5" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img3.jpg" title="image5" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -508,11 +445,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img4.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img4.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img4.jpg" title="image6" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img4.jpg" title="image6" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -522,11 +459,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img5.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img5.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img5.jpg" title="image1" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img5.jpg" title="image1" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -536,11 +473,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="asset/images/gallery-img6.jpg" class="img-responsive" alt="team1_img">
+                     <img src="images/gallery-img6.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="asset/images/gallery-img6.jpg" title="image2" class="img-link">
-                              <img src="asset/images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="images/gallery-img6.jpg" title="image2" class="img-link">
+                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -562,55 +499,25 @@
          <div class="row align-items-end">
             <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
                <div class="client-img">
-                  <img src="asset/images/client2-img.png" alt="img">
+                  <img src="images/client2-img.png" alt="img">
                </div>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                <div class="slider-section">
                   <div class="page-2-heading mb-2 mt-5">
                      <h4 class="text-color text-start set-margin">
-                        Our <span>Client's</span>
+                        PRISE DE <span>RENDEZ-VOUS</span>
                      </h4>
                   </div>
-                  <div class="owl-carousel owl-theme">
-                     <div class="item">
-                        <h4 class="mt-5 mb-3 resp-font-size">Why we are the best mdical and home
-                           care service provider.
-                        </h4>
-                        <a href="javascript" class="my-3 d-inline-block">Sarina Smith
-                           <small>(Designer)</small></a>
-                        <p class="mt-2">It is a long established fact that a reader will be distracted by
-                           the readable established fact that
-                           content of a page when looking at its layout. The point of using Lorem Ipsum
-                           established fact
-                           that a reader. The point of using Lorem Ipsum.
-                        </p>
-                     </div>
-                     <div class="item">
-                        <h4 class="mt-5 mb-3 resp-font-size">Why we are the best mdical and home
-                           care service provider.
-                        </h4>
-                        <a href="javascript" class="my-3 d-inline-block">Sarina Smith
-                           <small>(Designer)</small></a>
-                        <p class="mt-2">It is a long established fact that a reader will be distracted by
-                           the readable established fact that
-                           content of a page when looking at its layout. The point of using Lorem Ipsum
-                           established fact
-                           that a reader. The point of using Lorem Ipsum.
-                        </p>
-                     </div>
-                     <div class="item">
-                        <h4 class="mt-5 mb-3 resp-font-size">Why we are the best mdical and home
-                           care service provider.
-                        </h4>
-                        <a href="javascript" class="my-3 d-inline-block">Sarina Smith
-                           <small>(Designer)</small></a>
-                        <p class="mt-2">It is a long established fact that a reader will be distracted by
-                           the readable established fact that
-                           content of a page when looking at its layout. The point of using Lorem Ipsum
-                           established fact
-                           that a reader. The point of using Lorem Ipsum.
-                        </p>
+                  <div class="form-two-wrapper padd-100 float-start w-100">
+                     <div class="form-two">
+                        <form action="" method="post">
+                           <input type="text" name="name" placeholder="Nom et Prénoms *">
+                           <input type="email" name="mail" placeholder="Email *">
+                           <input type="tel" name="phone" placeholder="Telephone *">
+                           <textarea name="message" rows="3" cols="20" placeholder="Message"></textarea>
+                           <button type="submit" value="Submit" class="page2-btn">Envoyer</button>
+                        </form>
                      </div>
                   </div>
                </div>
@@ -654,7 +561,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="asset/images/blog-img1.jpg" alt="img">
+                     <img src="images/blog-img1.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">08<br>
                         july
@@ -683,7 +590,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="asset/images/blog-img2.jpg" alt="img">
+                     <img src="images/blog-img2.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">20<br>
                         july
@@ -713,7 +620,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="asset/images/blog-img3.jpg" alt="img">
+                     <img src="images/blog-img3.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">28<br>
                         july
@@ -751,19 +658,19 @@
                <div class="sb-partner-wrapper">
                   <div class="owl-carousel owl-theme">
                      <div class="item">
-                        <img src="asset/images/p-logos1.png" alt="img">
+                        <img src="images/p-logos1.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="asset/images/p-logos2.png" alt="img">
+                        <img src="images/p-logos2.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="asset/images/p-logos3.png" alt="img">
+                        <img src="images/p-logos3.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="asset/images/p-logos4.png" alt="img">
+                        <img src="images/p-logos4.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="asset/images/p-logos5.png" alt="img">
+                        <img src="images/p-logos5.png" alt="img">
                      </div>
                   </div>
                </div>
@@ -771,6 +678,9 @@
          </div>
       </div>
    </div>
+   <!-- partner section start -->
+   <!-- partner section start -->
+   <!-- footer section start -->
    <!-- partner section start -->
    
    <!--Footer section start-->
