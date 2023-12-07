@@ -125,7 +125,7 @@
          <div class="row">
             <div class="col-lg-4 d-none d-xl-block d-lg-block">
                <div class="">
-                  <img src="images/about2-img.jpg" alt="img" class="w-100">
+                  <img src="../asset/images/about2-img.jpg" alt="img" class="w-100">
                </div>
             </div>
             <div class="col-lg-8 col-md-12 col-12">
@@ -334,7 +334,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="images/founder-img1.png" alt="img">
+                  <img src="../asset/images/founder-img1.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -348,7 +348,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="images/founder-img2.png" alt="img">
+                  <img src="../asset/images/founder-img2.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -362,7 +362,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="sb-founder-section pt-5">
-                  <img src="images/founder-img3.png" alt="img">
+                  <img src="../asset/images/founder-img3.png" alt="img">
                   <section>
                      <div class="sb-service-section2 bg-change2">
                         <h6>Dr. Aimee Devlin</h6>
@@ -403,11 +403,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img1.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img1.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img1.jpg" title="image3" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img1.jpg" title="image3" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -417,11 +417,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img2.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img2.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img2.jpg" title="image4" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img2.jpg" title="image4" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -431,11 +431,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img3.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img3.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img3.jpg" title="image5" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img3.jpg" title="image5" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -445,11 +445,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img4.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img4.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img4.jpg" title="image6" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img4.jpg" title="image6" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -459,11 +459,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img5.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img5.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img5.jpg" title="image1" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img5.jpg" title="image1" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -473,11 +473,11 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="portfolio_img_wrapper">
                   <div class="portfolio_img">
-                     <img src="images/gallery-img6.jpg" class="img-responsive" alt="team1_img">
+                     <img src="../asset/images/gallery-img6.jpg" class="img-responsive" alt="team1_img">
                      <div class="portfolio_img_overlay">
                         <div class="portfolio_img_text">
-                           <a href="images/gallery-img6.jpg" title="image2" class="img-link">
-                              <img src="images/plus-Icon.png" alt="img" aria-hidden="true">
+                           <a href="../asset/images/gallery-img6.jpg" title="image2" class="img-link">
+                              <img src="../asset/images/plus-Icon.png" alt="img" aria-hidden="true">
                            </a>
                         </div>
                      </div>
@@ -486,7 +486,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-12">
                <div class="text-center mt-5">
-                  <a href="gallery.html" class="page2-btn bg-change">See all Images</a>
+                  <a href="gallery.html" class="page2-btn bg-change">See all ../asset/Images</a>
                </div>
             </div>
          </div>
@@ -499,7 +499,7 @@
          <div class="row align-items-end">
             <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
                <div class="client-img">
-                  <img src="images/client2-img.png" alt="img">
+                  <img src="../asset/images/client2-img.png" alt="img">
                </div>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 col-12">
@@ -561,7 +561,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="images/blog-img1.jpg" alt="img">
+                     <img src="../asset/images/blog-img1.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">08<br>
                         july
@@ -590,7 +590,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="images/blog-img2.jpg" alt="img">
+                     <img src="../asset/images/blog-img2.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">20<br>
                         july
@@ -620,7 +620,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                <div class="blog-box">
                   <div class="img-icon">
-                     <img src="images/blog-img3.jpg" alt="img">
+                     <img src="../asset/../asset/images/blog-img3.jpg" alt="img">
                      <div class="img-overlay"></div>
                      <p class="bg-blue text-center">28<br>
                         july
@@ -658,19 +658,19 @@
                <div class="sb-partner-wrapper">
                   <div class="owl-carousel owl-theme">
                      <div class="item">
-                        <img src="images/p-logos1.png" alt="img">
+                        <img src="../asset/../asset/images/p-logos1.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="images/p-logos2.png" alt="img">
+                        <img src="../asset/../asset/images/p-logos2.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="images/p-logos3.png" alt="img">
+                        <img src="../asset/../asset/images/p-logos3.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="images/p-logos4.png" alt="img">
+                        <img src="../asset/../asset/images/p-logos4.png" alt="img">
                      </div>
                      <div class="item">
-                        <img src="images/p-logos5.png" alt="img">
+                        <img src="../asset/../asset/images/p-logos5.png" alt="img">
                      </div>
                   </div>
                </div>
@@ -687,13 +687,13 @@
         <?= $this->include('partials/footer'); ?>
    <!--Footer esction end-->
 
-   <script src="asset/js/jquery-3.6.0.min.js"></script>
-   <script src="asset/js/bootstrap.min.js"></script>
-   <script src="asset/js/wow.js"></script>
-   <script src="asset/js/jquery.magnific-popup.js"></script>
-   <script src="asset/js/owl.carousel.min.js"></script>
-   <script src="asset/js/contact_form.js"></script>
-   <script src="asset/js/custom.js"></script>
+   <script src="../asset/js/jquery-3.6.0.min.js"></script>
+   <script src="../asset/js/bootstrap.min.js"></script>
+   <script src="../asset/js/wow.js"></script>
+   <script src="../asset/js/jquery.magnific-popup.js"></script>
+   <script src="../asset/js/owl.carousel.min.js"></script>
+   <script src="../asset/js/contact_form.js"></script>
+   <script src="../asset/js/custom.js"></script>
    <!-- custom js-->
    <script>
       wow = new WOW(
