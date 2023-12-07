@@ -472,7 +472,7 @@ a.button-btn span, button.button-btn span {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #00b3ff;
+  background-color: #00bf63;
   transform: translateY(-100%);
   transition: all 0.5s;
   z-index: -1;
@@ -485,7 +485,7 @@ a.button-btn span, button.button-btn span {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #00b3ff;
+  background-color: #00bf63;
   transform: translateY(100%);
   transition: all 0.5s;
   z-index: -1;
@@ -506,7 +506,7 @@ a.button-btn span, button.button-btn span {
 }
 
 .bg-change {
-  background-color: #00b3ff;
+  background-color: #00bf63;
 }
 
 .bg-change:before {
@@ -1033,7 +1033,7 @@ Banner section css
 .main-header-wrapper2 .sb-header-section2 .menu-top-section2 ul .btn2 {
   width: 180px;
   text-align: center;
-  background-color: #00b3ff;
+  background-color: #00bf63;
 }
 
 .main-header-wrapper2 .sb-header-section2 .menu-top-section2 ul .btn2:hover a {
@@ -2002,7 +2002,7 @@ Services section
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #0e3340db;
+  background-color: #00bf63;
   z-index: 1;
 }
 
@@ -2436,7 +2436,7 @@ Services section
 }
 
 .page-2-heading h4 span {
-  color: #00b3ff;
+  color: #00bf63;
 }
 
 .page-2-heading h4:before {
@@ -2459,7 +2459,7 @@ Services section
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: #00b3ff;
+  background: #00bf63;
   top: 49px;
 }
 
@@ -2472,10 +2472,23 @@ section {
   position: relative;
 }
 
+/* MON CSS */
+.serve0{
+  background-color: #00b3ff;
+}
+.serve1{
+  background-color: #009adb;
+}
+.serve2{
+  background-color: #0786bd;
+}
+.serve3{
+  background-color: #0374a4;
+}
+/* FIN */
 section .sb-service-section2 {
   text-align: center;
   padding: 40px 30px;
-  background-color: #00b3ff;
   color: #fff;
   position: relative;
   z-index: 1;
@@ -2512,7 +2525,7 @@ section .hover-type a {
 
 section:hover .sb-service-section2 {
   transform: translateY(-53px);
-  background-color: #009adb;
+  background-color: #00bf63;
 }
 
 section:hover .hover-type a {
@@ -2546,13 +2559,13 @@ section:hover .hover-type a {
   width: 30px;
   height: 3px;
   position: absolute;
-  background-color: #00b3ff;
+  background-color: #00bf63;
   left: 0;
   bottom: 30px;
 }
 
 .about2-main-wrapper h3 span {
-  color: #00b3ff;
+  color: #00bf63;
 }
 
 .about2-main-wrapper h4 {
@@ -2575,13 +2588,13 @@ section:hover .hover-type a {
 
 .about2-main-wrapper .sb-about-section .counter-main .count-up .counter-icon {
   padding: 20px;
-  border: 1px solid #00b3ff;
+  border: 1px solid #00bf63;
   margin-right: 15px;
 }
 
 .about2-main-wrapper .sb-about-section .counter-main .count-up svg {
   width: 50px;
-  fill: #00b3ff;
+  fill: #00bf63;
 }
 
 .about2-main-wrapper .sb-about-section .counter-main .count-up h3, .about2-main-wrapper .sb-about-section .counter-main .count-up h4 {
@@ -2668,7 +2681,8 @@ section:hover .hover-type a {
 .service2-main-wrapper .sb-service-box i {
   font-size: 65px;
   padding-bottom: 10px;
-  color: #00b3ff;
+  color: #004aad;
+  margin-bottom: 15px;
 }
 
 .service2-main-wrapper .sb-service-box h6 {
@@ -2677,13 +2691,13 @@ section:hover .hover-type a {
 }
 
 .service2-main-wrapper .sb-service-box:hover {
-  background: #00b3ff;
+  background: #004aad;
   color: #fff;
   transform: scale(1.1);
 }
 
 .service2-main-wrapper .sb-service-box:hover h6, .service2-main-wrapper .sb-service-box:hover i {
-  color: #fff;
+  color: #00bf63;
 }
 
 .service2-main-wrapper .sb-service-box:hover p {
@@ -3507,9 +3521,6 @@ section:hover .hover-type a {
 
 /*1.1 Service-details
 .......................................*/
-.service-main-page-wrapper {
-  /*--- slider ---*/
-}
 
 .service-main-page-wrapper .mt-25 {
   margin-top: 30px;
@@ -5716,11 +5727,7 @@ ul {
 }
 
 /*--------- form-two-start ---------*/
-.form-two-wrapper {
-  background-image: url("../images/form/bg-two.jpg");
-  background-size: cover;
-  position: relative;
-}
+
 
 .form-two-wrapper .form-two form {
   background-color: #ffffff;
