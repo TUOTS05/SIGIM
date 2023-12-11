@@ -9,7 +9,7 @@ class Patient extends BaseController
 {
     public function index()
     {
-        return view('Frontend/Patient/login');
+       // return view('Frontend/Patient/login');
 
         if(isset(session('patient')['id']))
         {
@@ -17,7 +17,7 @@ class Patient extends BaseController
         }
         else
         {
-            return redirect()->to(base_url('/Patient /login'));
+            return redirect()->to(base_url('/Patient/login'));
         }
         //
     }
@@ -64,7 +64,6 @@ class Patient extends BaseController
 
     public function login()
     {
-        echo 'bonjour';
         //
         $patients = new PatientModel();
 

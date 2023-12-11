@@ -8,11 +8,11 @@
                         <div class="float-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">SIGIM</a></li>
-                                <li class="breadcrumb-item"><a href="#"><?php echo $sub_title ?></a></li>
-                                <li class="breadcrumb-item active"><?php echo $sub_title ?></li>
+                                <li class="breadcrumb-item"><a href="#"><?php //echo $sub_title ?></a></li>
+                                <li class="breadcrumb-item active"><?php //echo $sub_title ?></li>
                             </ol>
                         </div>
-                        <h4 class="page-title"><?php echo $sub_title ?></h4>
+                        <h4 class="page-title"><?php //echo $sub_title ?></h4>
                     </div>
                     <!--end page-title-box-->
                 </div>

@@ -3,8 +3,8 @@
 
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <?php $this->include('layouts/title-meta'); ?>
-    <?php $this->include('layouts/head-css'); ?>
+    <?php $this->include('layouts-patient/title-meta'); ?>
+    <?php $this->include('layouts-patient/head-css'); ?>
 </head>
 
 <body id="body" class="auth-page" style="background-image: url('../assets/images/p-1.png'); background-size: cover; background-position: center center;">
@@ -14,14 +14,14 @@
             <div class="col-12 align-self-center">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6 mx-auto">
+                        <div class="col-lg-4 mx-auto">
                             <div class="card">
                                 <div class="card-body p-2 auth-header-box">
                                     <div class="text-center p-6">
                                         <a href="index.html" class="logo logo-admin">
                                             <img src="../assets/images/sigim.png" height="50" alt="logo" class="auth-logo">
                                         </a>
-                                        <h4 class="mt-1 mb-1 fw-semibold text-white font-18">C’est parti pour SIGIM</h4>   
+                                        <h4 class="mt-1 mb-1 fw-semibold text-white font-18">Admin SIGIM</h4>   
                                         <p class="text-muted  mb-0">Inscrivez-vous pour continuer à SIGIM.</p>  
                                     </div>
                                 </div>
