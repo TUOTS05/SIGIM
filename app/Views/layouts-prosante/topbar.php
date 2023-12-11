@@ -203,7 +203,7 @@
                     <a class="dropdown-item" href="#"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
                     <a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Settings</a>
                     <div class="dropdown-divider mb-0"></div>
-                    <a class="dropdown-item" href="<?= base_url('/login'); ?>"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</a>
+                    <a class="dropdown-item" href="<?= base_url('/Prosante/logout'); ?>"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</a>
                 </div>
             </li><!--end topbar-profile-->
             <li class="notification-list">

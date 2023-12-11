@@ -113,6 +113,17 @@ class Prosante extends BaseController
       
     }
 
+    public function register_prosante()
+    {
+
+        if (isset(session('Prosante')['id'])) {
+            return view('Backend/Prosante/register-prosante');
+        } else {
+            return redirect()->to(base_url('/Prosante/login'));
+        }
+
+    }
+
 
 
     // page de connexion

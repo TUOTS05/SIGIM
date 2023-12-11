@@ -1,25 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <?php $this->include('layouts-patient/title-meta'); ?>
-    <?php $this->include('layouts-patient/head-css'); ?>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-  
-    <script type="text/javascript"> 
-    /*  $(function(){
-    setTimeout(function(){
-        $(".text-danger").hide();
-        },2000);
-      });*/
 
-      $(function(){
-       $('.alert').delay(5000).fadeOut();
-      });
-    </script>
+    <?= $this->include('layouts-prosante/title-meta'); ?>
+
+    <?= $this->include('layouts-prosante/head-css'); ?>
 </head>
 
 <body id="body" class="auth-page" style="background-image: url('../assets/images/p-1.png'); background-size: cover; background-position: center center;">
-    <!-- Log In page -->
-    <div class="container-md">
+    
+      <!-- Log In page -->
+      <div class="container-md">
         <div class="row vh-100 d-flex justify-content-center">
             <div class="col-12 align-self-center">
                 <div class="card-body">
@@ -31,7 +24,7 @@
                                         <a href="index.html" class="logo logo-admin">
                                             <img src="../assets/images/sigim.png" height="50" alt="logo" class="auth-logo">
                                         </a>
-                                        <h4 class="mt-1 mb-1 fw-semibold text-white font-18">Admin SIGIM</h4>
+                                        <h4 class="mt-1 mb-1 fw-semibold text-white font-18">Patient</h4>
                                         <p class="text-muted  mb-0">Inscrivez-vous pour continuer à SIGIM.</p>
                                     </div>
                                 </div>
@@ -123,14 +116,9 @@
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
-
     <!-- App js -->
     <script type="text/javascript" src="../assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  
-
-
 
 </body>
 
