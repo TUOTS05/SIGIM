@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-
+use App\Models\PatientModel;
 use App\Models\ProsanteModel;
 use App\Controllers\BaseController;
 
@@ -23,7 +23,6 @@ class Prosante extends BaseController
         } else {
             return redirect()->to(base_url('/Prosante/login'));
         }
-        
     }
 
 
@@ -31,7 +30,7 @@ class Prosante extends BaseController
     public function register()
     {
         //
-       
+
 
         $rules = [
             'nom' => 'required|min_length[3]|max_length[20]',
@@ -77,8 +76,8 @@ class Prosante extends BaseController
 
         ];
 
-        
-        if($this->request->is('post')){
+
+        if ($this->request->is('post')) {
 
 
             if (!$this->validate($rules, $messages)) {
@@ -93,35 +92,58 @@ class Prosante extends BaseController
                     'mdp' => password_hash($this->request->getVar('mdp'), PASSWORD_BCRYPT),
                 ];
             }
-    
-    
-    
+
+
+
             $query = $prosante->insert($data);
-    
+
             if (!$query) {
                 return redirect()->back('/Prosante/register')->with("fail", "quelque chose s'est mal pasesée");
                 # code...
             } else {
-    
+
                 return redirect()->to(base_url('/Prosante/register'))->with("success", "Votre compte a bien été crée pour l'activer verifier votre boite de messagerie !");
             }
-
-        }else{
+        } else {
             return view('Backend/Prosante/register');
         }
-
-      
     }
 
-    public function register_prosante()
+    public function register_prosante($key)
     {
 
-        if (isset(session('Prosante')['id'])) {
-            return view('Backend/Prosante/register-prosante');
-        } else {
-            return redirect()->to(base_url('/Prosante/login'));
-        }
 
+        if (isset(session('Prosante')['id'])) {
+
+         
+
+                $patient = new PatientModel();
+             /*   $data = [
+                    'groupe_sanguin' => $this->request->getVar('groupe_sanguin'),
+                    'taille' => $this->request->getVar('taille'),
+                    'poids' => $this->request->getVar('poids'),
+                    'allergie' => $this->request->getVar('allergie'),
+
+                ];*/
+
+
+
+                $data['patient'] = $patient->where('id', $key)->first();
+
+            /*   if ($this->request->is('post')) {
+
+                     $patient->update($key, $data);
+            }
+*/
+
+
+
+
+                return view('Backend/Prosante/register-prosante', $data);
+            } else {
+                return redirect()->to(base_url('/Prosante/login'));
+            }
+       
     }
 
 
@@ -159,12 +181,12 @@ class Prosante extends BaseController
 
                 /* return redirect()->to(base_url('/Prosante/login')); */
             }
-        }else{
+        } else {
             return view('Backend/Prosante/login');
         }
     }
 
-    
+
     public function profile()
     {
         return view('Frontend/Prosante/page-profile');
@@ -176,4 +198,6 @@ class Prosante extends BaseController
         session()->destroy();
         return redirect()->to(base_url('/Prosante/login'));
     }
+
+
 }

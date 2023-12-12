@@ -34,7 +34,7 @@ $routes->get('/Prosante/register', 'Prosante::register');
 $routes->post('/Prosante/register', 'Prosante::register');
 
 
-$routes->get('/Prosante/register-prosante', 'Prosante::register_prosante');
+$routes->get('/Prosante/register-prosante/(:num)', 'Prosante::register_prosante/$1');
 
 $routes->get('/Prosante/logout', 'Prosante::logout');
 
