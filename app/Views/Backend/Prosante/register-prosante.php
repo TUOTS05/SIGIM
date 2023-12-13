@@ -10,7 +10,7 @@
 </head>
 
 <body id="body" class="auth-page" style="background-image: url('../assets/images/p-1.png'); background-size: cover; background-position: center center;">
-      <!-- Log In page -->
+    <!-- Log In page -->
     <div class="container-md">
         <div class="row vh-100 d-flex justify-content-center">
             <div class="col-12 align-self-center">
@@ -24,11 +24,11 @@
                                             <img src="../assets/images/sigim.png" height="50" alt="logo" class="auth-logo">
                                         </a>
                                         <h4 class="mt-1 mb-1 fw-semibold text-white font-18">Ajout</h4>
-                                        <p class="text-muted  mb-0 fs-4 fw-bold text-capitalize"><?= $patient['nom'].' '.$patient['prenom']; ?></p>
+                                        <p class="text-muted  mb-0 fs-4 fw-bold text-capitalize"><?= $patient['nom'] . ' ' . $patient['prenom']; ?></p>
                                     </div>
                                 </div>
                                 <div class="card-body pt-0">
-                                    <form class="my-4" action="<?= base_url('/Prosante/register'); ?>" method="post">
+                                    <form class="my-4" action="<?= base_url('/Prosante/register-prosante/') . $patient['id']; ?>" method="post">
                                         <?= csrf_field(); ?>
                                         <?php if (!empty(session()->getFlashdata('fail'))) : ?>
                                             <div class="alert alert-danger rounded-0" role="alert"><?= session()->getFlashdata('fail'); ?></div>
@@ -61,7 +61,7 @@
 
                                                 <div class="form-group mb-2">
                                                     <label class="form-label" for="date_de_naissance">Date de Naissance</label>
-                                                    <input type="date" readonly  class="form-control bg-light fw-bold" id="date_de_naissance" value="<?= $patient['date_de_naissance']; ?>" name="date_de_naissance" placeholder="date de naissance">
+                                                    <input type="date" readonly class="form-control bg-light fw-bold" id="date_de_naissance" value="<?= $patient['date_de_naissance']; ?>" name="date_de_naissance" placeholder="date de naissance">
                                                     <span class="text-danger">
                                                         <?= isset($validation) ? display_form_errors($validation, 'date_de_naissance') : '' ?>
                                                     </span>
@@ -74,6 +74,15 @@
                                                         <?= isset($validation) ? display_form_errors($validation, 'email') : '' ?>
                                                     </span>
                                                 </div><!--end form-group-->
+
+                                                <div class="form-group mb-2">
+                                                    <label class="form-label" for="telephone">Telephone</label>
+                                                    <input type="text" readonly class="form-control bg-light fw-bold" id="telephone" name="telephone" value="<?= /*set_value('nom');*/ $patient['telephone']; ?>" placeholder="Telephone Mobile">
+                                                    <span class="text-danger">
+                                                        <?= isset($validation) ? display_form_errors($validation, 'telephone') : '' ?>
+                                                    </span>
+                                                </div><!--end form-group-->
+
                                             </div>
 
 
@@ -81,89 +90,105 @@
 
                                             <div class="col">
 
-                                                <div class="form-group mb-2">
-                                                    <label class="form-label" for="telephone">Telephone</label>
-                                                    <input type="text" class="form-control bg-light" id="telephone" name="telephone" value="<?= /*set_value('nom');*/ $patient['telephone']; ?>" placeholder="Telephone Mobile">
-                                                    <span class="text-danger">
-                                                        <?= isset($validation) ? display_form_errors($validation, 'telephone') : '' ?>
-                                                    </span>
-                                                </div><!--end form-group-->
+
+                                             
 
                                                 <div class="form-group mb-2">
                                                     <label class="form-label" for="sexe">Sexe</label>
-                                                    <input type="text" class="form-control bg-light" id="sexe" value="<?= /*set_value('prenom');*/ $patient['sexe']; ?>" name="sexe" placeholder="Sexe">
-                                                    <span class="text-danger">
+                                                    <select name="sexe" id="sexe" class="form-select bg-light fw-bold">
+
+                                                        <option <?php if($patient['sexe'] === 'Masculin'){ echo 'selected' ; } ?> value="Masculin">Masculin</option>
+                                                        <option <?php if($patient['sexe'] === 'Feminin'){ echo 'selected' ; } ?> value="Feminin">Feminin</option>
+
+                                                    </select>
+                                                    <span class="text-danger text-sm">
                                                         <?= isset($validation) ? display_form_errors($validation, 'sexe') : '' ?>
                                                     </span>
-                                                </div><!--end form-group-->
+                                                </div>
 
 
 
-                                               <!---------------MiSE A JOUR FORMULAIRE DU PATIENT-------------->
-                                                
+                                                <!---------------MiSE A JOUR FORMULAIRE DU PATIENT-------------->
+
 
                                                 <div class="form-group mb-2">
                                                     <label class="form-label" for="groupe_sanguin">Groupe Sanguin</label>
-                                                    <input type="text" class="form-control bg-light" id="groupe_sanguin" value="<?= 'bonjour'; /*set_value('email'); s['date'] */ ?>" name="groupe_sanguin" placeholder="Groupe Sanguin">
-                                                    <span class="text-danger">
+                                                    <select name="groupe_sanguin" id="groupe_sanguin" class="form-select bg-light fw-bold">
+
+                                                        <option <?php if($patient['groupe_sanguin'] === 'O'){ echo 'selected' ; } ?> value="O">O</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'A'){ echo 'selected' ; } ?> value="A">A</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'B'){ echo 'selected' ; } ?> value="B">B</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'AB'){ echo 'selected' ; } ?> value="AB">AB</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'A+'){ echo 'selected' ; } ?> value="A+">A+</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'B+'){ echo 'selected' ; } ?> value="B+">B+</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'O+'){ echo 'selected' ; } ?> value="O+">O+</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'AB+'){ echo 'selected' ; } ?> value="AB+">AB+</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'A-'){ echo 'selected' ; } ?> value="A-">A-</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'B-'){ echo 'selected' ; } ?> value="B-">B-</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'O-'){ echo 'selected' ; } ?> value="O-">O-</option>
+                                                        <option <?php if($patient['groupe_sanguin'] === 'AB-'){ echo 'selected' ; } ?> value="AB-">AB-</option>
+
+                                                    </select>
+                                                    <span class="text-danger text-sm">
                                                         <?= isset($validation) ? display_form_errors($validation, 'groupe_sanguin') : '' ?>
                                                     </span>
-                                                </div><!--end form-group-->
+                                                </div>
 
 
-                                              
+
 
 
 
                                                 <div class="form-group mb-2">
                                                     <label class="form-label" for="date">Taille</label>
-                                                    <input type="number" class="form-control bg-light" id="date" value="<?= 'bonjour'; /*set_value('email'); s['date'] */ ?>" name="date" placeholder="Enter email">
+                                                    <input type="text" class="form-control bg-light fw-bold" id="date" value="<?= $patient['taille']; ?>" name="taille" placeholder="Enter email">
                                                     <span class="text-danger">
-                                                        <?= isset($validation) ? display_form_errors($validation, 'date') : '' ?>
+                                                        <?= isset($validation) ? display_form_errors($validation, 'taille') : '' ?>
                                                     </span>
                                                 </div><!--end form-group-->
 
 
-                                                
+
                                                 <div class="form-group mb-2">
                                                     <label class="form-label" for="date">Poids</label>
-                                                    <input type="number" class="form-control bg-light" id="date" value="<?= 'bonjour'; /*set_value('email'); s['date'] */ ?>" name="date" placeholder="Enter email">
+                                                    <input type="text" class="form-control bg-light fw-bold" id="date" value="<?= $patient['poids']; ?>" name="poids" placeholder="Enter email">
                                                     <span class="text-danger">
-                                                        <?= isset($validation) ? display_form_errors($validation, 'date') : '' ?>
+                                                        <?= isset($validation) ? display_form_errors($validation, 'poids') : '' ?>
                                                     </span>
                                                 </div><!--end form-group-->
 
 
-                                                
+
                                                 <div class="form-group mb-2">
-                                                    <label class="form-label" for="date">Allergie</label>
-                                                    <input type="text" class="form-control bg-light" id="date" value="<?= 'bonjour'; /*set_value('email'); s['date'] */ ?>" name="date" placeholder="Enter email">
+                                                    <label class="form-label" for="allergie">Allergie</label>
+                                                    <input type="text" class="form-control bg-light fw-bold" id="allergie" value="<?= $patient['allergie']; ?>" name="allergie" placeholder="Enter email">
                                                     <span class="text-danger">
-                                                        <?= isset($validation) ? display_form_errors($validation, 'date') : '' ?>
+                                                        <?= isset($validation) ? display_form_errors($validation, 'allergie') : '' ?>
                                                     </span>
                                                 </div><!--end form-group-->
 
 
                                             </div>
-                                         
+
                                         </div>
 
 
 
+
+
                                         <div class="form-group mb-2">
-                                                    <label class="form-label" for="groupe_sanguin">Note</label>
-                                                    <textarea rows="6" cols="" class="form-control bg-light" id="groupe_sanguin" value="<?= 'bonjour'; /*set_value('email'); s['date'] */ ?>" name="groupe_sanguin" placeholder="que pouvez vous dire à propos du patient"></textarea>
-                                                    <span class="text-danger">
-                                                        <?= isset($validation) ? display_form_errors($validation, 'groupe_sanguin') : '' ?>
-                                                    </span>
+                                            <label class="form-label mt-4" for="">Note :</label>
+                                            <label class="form-label bg-light w-100 p-3" for="note">Note Recente : <?= $patient['note'] ?></label>
+                                            <textarea rows="6" cols="" class="form-control bg-light" id="note" name="note" placeholder="que pouvez vous dire à propos du patient"></textarea>
+                                            <span class="text-danger">
+                                                <?= isset($validation) ? display_form_errors($validation, 'note') : '' ?>
+                                            </span>
                                         </div><!--end form-group-->
-
-
 
                                         <div class="form-group mb-0 row">
                                             <div class="col-12">
                                                 <div class="d-grid mt-3">
-                                                    <button class="btn btn-primary rounded-0" name="inscription" type="submit">Mettre à jour<i class="fas fa-sign-in-alt ms-1"></i></button>
+                                                    <button class="btn btn-primary rounded-0" name="update_patient" type="submit">Mettre à jour<i class="fas fa-sign-in-alt ms-1"></i></button>
                                                 </div>
                                             </div><!--end col-->
                                         </div> <!--end form-group-->

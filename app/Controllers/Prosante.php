@@ -118,23 +118,24 @@ class Prosante extends BaseController
          
 
                 $patient = new PatientModel();
-             /*   $data = [
+               $data = [
                     'groupe_sanguin' => $this->request->getVar('groupe_sanguin'),
                     'taille' => $this->request->getVar('taille'),
                     'poids' => $this->request->getVar('poids'),
                     'allergie' => $this->request->getVar('allergie'),
+                    'note' => $this->request->getVar('note'),
 
-                ];*/
+                ];
 
 
 
                 $data['patient'] = $patient->where('id', $key)->first();
 
-            /*   if ($this->request->is('post')) {
+              if ($this->request->is('post')) {
 
                      $patient->update($key, $data);
             }
-*/
+
 
 
 
