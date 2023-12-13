@@ -31,7 +31,7 @@ class User extends BaseController
 
         $name = $this->request->getPost('name');
         $email = $this->request->getPost('email');
-        $password = password_hash($this->request->getPost('password'), PASSWORD_BCRYPT);
+        $password = password_hash('password', PASSWORD_BCRYPT);
 
         $data = [
             'name' => $name,

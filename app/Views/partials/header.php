@@ -35,7 +35,7 @@
                         </li>
                         <li class="btn2">
                            <span class="text-light">
-                              <a href="<?= base_url('/Patient/login'); ?>">Espace patient</a>
+                              <a href="<?= base_url('/Patient'); ?>">Espace patient</a>
                            </span>
                         </li>
 
