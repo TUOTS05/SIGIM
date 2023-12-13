@@ -8,4 +8,12 @@ class Home extends BaseController
     {
         return view('Frontend/Accueil/index');
     }
+    public function contact(): string
+    {
+        return view('Frontend/Accueil/contact');
+    }
+    public function apropo(): string
+    {
+        return view('Frontend/Accueil/apropos');
+    }
 }
