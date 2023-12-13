@@ -9,6 +9,55 @@ class Patient extends BaseController
 {
     public function __construct()
     {
+<<<<<<< HEAD
+        // return view('Frontend/Patient/login');
+
+        if (isset(session('patient')['id'])) {
+            return view('/Patient/index');
+        } else {
+            return redirect()->to(base_url('/Patient/login'));
+        }
+        //
+    }
+
+    public function register()
+    {
+        //
+        return view('Frontend/Patient/register');
+    }
+
+
+
+    public function dash()
+    {
+        //
+        $patients = new PatientModel();
+        $data['patient'] = $patients->findAll();
+        return view('Frontend/Patient/dash', $data);
+    }
+
+    public function savePatient()
+    {
+        //
+        $patients = new PatientModel();
+        $data = [
+            'nom' => $this->request->getVar('nom'),
+            'prenom' => $this->request->getVar('prenom'),
+            'date_de_naissance' => $this->request->getVar('date'),
+            'sexe' => $this->request->getVar('sexe'),
+            'telephone' => $this->request->getVar('tel'),
+            'email' => $this->request->getVar('email'),
+            'mdp' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+        ];
+
+        $patients->insert($data);
+        session()->setFlashData("success", "Votre compte a été crée avec succés");
+        return redirect()->to(base_url('/Patient/login'));
+    }
+
+    public function login()
+    {
+=======
         helper(['form', 'url']); 
     } 
 
@@ -38,11 +87,29 @@ class Patient extends BaseController
 
     public function loginPatient()
     {
+>>>>>>> origin
         //
         $patients = new PatientModel();
 
         $email =  $this->request->getVar('email');
         $mdp = $this->request->getVar('password');
+<<<<<<< HEAD
+        $user = $patients->where('email', $email)->first();
+
+        if ($user) {
+            if (password_verify($mdp, $user['mdp'])) {
+
+                session()->set('patient', $user);
+
+                return redirect()->to(base_url('/Patient/dash'));
+            } else {
+                echo "Mot de passe incorrect";
+
+                return redirect()->to(base_url('/Patient/login'));
+            }
+        } else {
+
+=======
         $user = $patients->where('email',$email)->first();
 
         if ($user) {
@@ -54,6 +121,7 @@ class Patient extends BaseController
                 return redirect()->to(base_url('/Patient'));
             }
         }else{     
+>>>>>>> origin
             echo "Cet email n\'existe pas";
             return redirect()->to(base_url('/Patient'));
         }
@@ -200,6 +268,12 @@ class Patient extends BaseController
     }
 
 
+<<<<<<< HEAD
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to(base_url('/Patient/login'));
+=======
     public function logout(){
         if(isset(session('patient')['id']))
         {
@@ -209,6 +283,6 @@ class Patient extends BaseController
         else{
             return redirect()->to(base_url('/Patient'));
         }
+>>>>>>> origin
     }
-    
 }

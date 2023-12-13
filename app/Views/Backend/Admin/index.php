@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
 
-<?= $this->include('layouts/title-meta.php'); ?>
-<?= $this->include('layouts/head-css.php'); ?>
+<?= $this->include('layouts-patient/title-meta.php'); ?>
+<?= $this->include('layouts-patient/head-css.php'); ?>
 </head>
 
 <body id="body" class="dark-sidebar">
 
-<?= $this->include('layouts/left-sidebar'); ?>
-<?= $this->include('layouts/topbar'); ?>
+<?= $this->include('layouts-patient/left-sidebar'); ?>
+<?= $this->include('layouts-patient/topbar'); ?>
 
 
 
@@ -21,7 +21,7 @@
     <!-- Page Content-->
     <div class="page-content-tab">
 
-        <?= $this->include('layouts/home'); ?>
+        <?= $this->include('layouts-patient/home'); ?>
 
         <!--end Rightbar-->
 
@@ -29,7 +29,7 @@
 
         <!--Start Footer-->
 
-        <?= $this->include('layouts/footer'); ?>
+        <?= $this->include('layouts-patient/footer'); ?>
         <!-- end Footer -->
         
     </div>

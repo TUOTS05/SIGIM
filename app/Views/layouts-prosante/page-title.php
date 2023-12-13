@@ -1,5 +1,5 @@
-<?= $page_title = "Profile"; 
-    $sub_title = "Pages"; ?>
+<?php //$page_title = "Profile"; 
+//$sub_title = "Pages"; ?>
 
 <div class="row">
     <div class="col-sm-12">

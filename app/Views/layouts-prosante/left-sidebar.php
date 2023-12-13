@@ -70,6 +70,26 @@
                         </div><!--end sidebarAnalytics-->
                     </li><!--end nav-item-->
 
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sidebarPatient" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="sidebarTables">
+                            <i class="ti ti-table menu-icon"></i>
+                            <span>Patients</span>
+                        </a>
+                        <div class="collapse " id="sidebarPatient">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('Prosante/register-prosante'); ?>">Ajouter Patient</a>
+                                </li><!--end nav-item-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tables-datatable.php">Liste Patient</a>
+                                </li><!--end nav-item-->
+                            </ul><!--end nav-->
+                        </div><!--end sidebarTables-->
+                    </li><!--end nav-item-->
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="#sidebarCrypto" data-bs-toggle="collapse" role="button"
                             aria-expanded="false" aria-controls="sidebarCrypto">

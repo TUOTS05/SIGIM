@@ -4,19 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class ProsanteModel extends Model
 {
-    protected $table            = 'users';
+    protected $table            = 'prosantes';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [
-        'name',
-        'email',
-        'mdp',
-    ];
+    protected $allowedFields    = ['nom','prenom','service','email','mdp'];
 
     // Dates
     protected $useTimestamps = false;

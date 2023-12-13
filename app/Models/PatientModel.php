@@ -19,9 +19,19 @@ class PatientModel extends Model
         "sexe",
         "telephone",
         "email",
+<<<<<<< HEAD
+        "groupe_sanguin",
+        "taille",
+        "poids",
+        "allergie",
+        "note",
+        "mdp",
+
+=======
         "mdp",
         "lien",
         "status"
+>>>>>>> origin
     ];
 
     // Dates
