@@ -109,8 +109,6 @@ class Patient extends BaseController
             }
         } else {
 
-=======
-        $user = $patients->where('email',$email)->first();
 
         if ($user) {
             if (password_verify($mdp, $user['mdp'])) {
@@ -273,7 +271,7 @@ class Patient extends BaseController
     {
         session()->destroy();
         return redirect()->to(base_url('/Patient/login'));
-=======
+
     public function logout(){
         if(isset(session('patient')['id']))
         {

@@ -24,11 +24,11 @@
                         </li>
                         <li class="btn2">
                            <span class="text-light">
-<<<<<<< HEAD
+
                               <a href="<?= base_url('/Patient'); ?>">Espace patient</a>
-=======
+
                               <a href="login.html">Connexion </a>/<a href="register.html"> s'inscrire</a>
->>>>>>> refs/remotes/origin/master
+
                            </span>
                         </li>
                      </ul>
