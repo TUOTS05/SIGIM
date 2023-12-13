@@ -10,14 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index');
 
-<<<<<<< HEAD
-  // les routes du dashboard patient----------------------
-
-$routes->get('/Accueil', 'Patient::index');
-$routes->get('/Patient/login', 'Patient::index');
-=======
 $routes->get('/Patient', 'Patient::login');
->>>>>>> origin
 $routes->get('/Patient/register', 'Patient::register');
 $routes->post('/Patient/save_patient', 'Patient::savePatient');
 $routes->post('/Patient/login_patient', 'Patient::loginPatient');

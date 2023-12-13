@@ -6,11 +6,12 @@ function display_form_errors($validation, $field)
         # code...
         return $validation->getError($field);
     }else{
-<<<<<<< HEAD
+
 
         return false ;
-=======
+
         return false;
->>>>>>> origin
+
     }
+
 }
