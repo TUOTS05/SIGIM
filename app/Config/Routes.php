@@ -9,15 +9,12 @@ use CodeIgniter\Router\RouteCollection;
   // la page d'accueil du site sigim----------------------
 
 $routes->get('/', 'Home::index');
+$routes->get('/contact','Home::contact');
+$routes->get('/apropo','Home::apropo');
 
-<<<<<<< HEAD
   // les routes du dashboard patient----------------------
-
 $routes->get('/Accueil', 'Patient::index');
 $routes->get('/Patient/login', 'Patient::index');
-=======
-$routes->get('/Patient', 'Patient::login');
->>>>>>> origin
 $routes->get('/Patient/register', 'Patient::register');
 $routes->post('/Patient/save_patient', 'Patient::savePatient');
 $routes->post('/Patient/login_patient', 'Patient::loginPatient');
