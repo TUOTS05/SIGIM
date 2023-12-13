@@ -1,10 +1,39 @@
+<!--index 02 page partner section start -->
+<div class="partner-main-wrapper bg-section-color float_left">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+               <div class="sb-partner-wrapper">
+                  <div class="owl-carousel owl-theme">
+                     <div class="item">
+                        <img src="../asset/images/p-logos1.png" alt="img">
+                     </div>
+                     <div class="item">
+                        <img src="../asset/images/p-logos2.png" alt="img">
+                     </div>
+                     <div class="item">
+                        <img src="../asset/images/p-logos3.png" alt="img">
+                     </div>
+                     <div class="item">
+                        <img src="../asset/images/p-logos4.png" alt="img">
+                     </div>
+                     <div class="item">
+                        <img src="../asset/images/p-logos5.png" alt="img">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- partner section end -->
 <div class="footer-main-wrapper page2-footer-main float_left">
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 col-12">
                <div class="sb-footer-section">
                   <div class="footer-logo">
-                  <a href="javascript:;"> <img src="images/logo2.png" alt="img" heigth="auto" width="210px"></a>
+                  <a href="javascript:;"> <img src="../asset/images/logo1.png" alt="img" heigth="auto" width="210px"></a>
                   </div>
                   <div><p class="text-white">Maxime, nihil culpa temporibus, sapiente voluptas vero autem adipisci dolores modi inventore maiores amet quasi, itaque laboriosam? Quam esse aperiam tenetur delectus!</p></div>
                </div>
@@ -83,14 +112,13 @@
          </div>
       </div>
    </div>
-   <!-- footer section end -->
-   <script src="js/jquery-3.6.0.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/wow.js"></script>
-   <script src="js/jquery.magnific-popup.js"></script>
-   <script src="js/owl.carousel.min.js"></script>
-   <script src="js/contact_form.js"></script>
-   <script src="js/custom.js"></script>
+   <script src="../asset/js/jquery-3.6.0.min.js"></script>
+   <script src="../asset/js/bootstrap.min.js"></script>
+   <script src="../asset/js/wow.js"></script>
+   <script src="../asset/js/jquery.magnific-popup.js"></script>
+   <script src="../asset/js/owl.carousel.min.js"></script>
+   <script src="../asset/js/contact_form.js"></script>
+   <script src="../asset/js/custom.js"></script>
    <!-- custom js-->
    <script>
       wow = new WOW(

@@ -3,13 +3,13 @@
 <html lang="en" dir="ltr">
 
 <head>
-   
+   <?= $this->include('partials/head-css'); ?>
 </head>
-<?= $this->include('partials/head-css'); ?>
 <body>
+   <!-- debut du header -->
+   <?= $this->include('partials/header'); ?>
+   <!-- fin header -->
    
-<?= $this->include('partials/header'); ?>
-
    <!-- banner sction start -->
       <!-- banner section start -->
       <div class="banner-main-wrapper2 float_left">
@@ -18,7 +18,7 @@
             <div class="carousel-item active">
                <div class="container">
                   <h4>la sante <span>, enfin accessible</span></h4>
-                  <h3>Un systeme innovante qui <br>révolutionne les soins de santé.</h3>
+                  <h3>Un systeme innovant qui <br>révolutionne les soins de santé.</h3>
                   <p>"Grâce à SIGIM, obtenez les meilleurs soins de santé, où que vous soyez." <br>SIGIM vous permet d'accéder à des soins de santé de qualité, <br>de manière rapide et efficace, où que vous soyez dans le monde.
                   </p>
                   <ul>
@@ -40,9 +40,9 @@
                <div class="container">
                   <h4>Suivi de <span>traitement</span></h4>
                   <h3>Avec notre système de gestion<br> d'information medicale, vous pouvez :</h3>
-                  <span style="margin-top: 10px; font-size:1em">- Consulter vos rendez-vous à venir</span><br>
-                  <span style="margin-top: 10px; font-size:1em">- Suivre vos prescriptions</span><br>
-                  <span style="margin-top: 10px; font-size:1em">- Recevoir des rappels</span>
+                  <span style="margin-top: 10px;-size:1em">- Consulter vos rendez-vous à venir</span><br>
+                  <span style="margin-top: 10px;-size:1em">- Suivre vos prescriptions</span><br>
+                  <span style="margin-top: 10px;-size:1em">- Recevoir des rappels</span>
                   <ul>
                      <li class="btn-color2"><a href="appoinment.html" class="page2-btn">En savoir plus sur SIGIM ?</a></li>
                   </ul>
@@ -84,7 +84,7 @@
                      </p>
                   </div>
                   <div class="hover-type">
-                     <a href="service.html" class="d-inline-block w-100 text-center">View More</a>
+                     <a href="service.html" class="d-inline-block w-100 text-center">En savoir plus !</a>
                   </div>
                </section>
             </div>
@@ -242,9 +242,34 @@
    <!-- index 02 emergency section start -->
    <div class="emergency2-main-wrapper float_left">
       <div class="container-fluid">
-         <div class="row text-center">
-            <div class="p-0">
-               <div class="sb-emergency-section">gdgdgdgdg</div>
+         <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 p-0">
+               <div class="video-section">
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                     <div class="modal-dialog modal-dialog-centered"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0">
+               <div class="sb-emergency-section">
+                  <div class="content">
+                     <span><i class="fas fa-headphones-alt"></i></span>
+                     <h4>Le Bouttons Alerte<br>disponible 24/7</h4>
+                  </div>
+                  <p>En d'urgence, en un <a href="#" class="urgences"> clic </a> faite sonner le téléphone du medecin traitant<br>
+                     et cas d'indisponibilité l'alert est transferer aux secour d'urgence (Saper-Pompier, Samu)
+                  </p>
+                  <div class="content">
+                     <span><i class="fas fa-phone"></i></span>
+                     <h4>+225 0701 0203 04 </h4>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+               <div class="text-center mt-5">
+                  <a href="service.html" class="page2-btn rdvc">En savoir plus !</a>
+               </div>
             </div>
          </div>
       </div>
@@ -321,68 +346,124 @@
          </div>
       </div>
    </div>
-   <!-- index 02 page service section end -->
-   <div class="founder-main-wrapper float_left">
+   <!-- index02 page Client section start -->
+   <div class="client2-main-wrapper float_left">
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-               <div class="page-2-heading">
-                  <h4>
-                     Our <span>Founders</span>
-                  </h4>
-               </div>
+            <div class="page-2-heading mb-5 mt-2">
+               <h4 class="text-color text-center set-margin">
+                  PRISE DE <span>RENDEZ-VOUS</span>
+               </h4>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="sb-founder-section pt-5">
-                  <img src="../asset/images/founder-img1.png" alt="img">
-                  <section>
-                     <div class="sb-service-section2 bg-change2">
-                        <h6>Dr. Aimee Devlin</h6>
-                        <p>Psychiatrist</p>
+            <div class="rdv">
+               <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
+                  <div class="owl-carousel owl-theme">
+                     <div class="client-img">
+                        <img src="../asset/images/client1-img.png" alt="img">
                      </div>
-                     <div class="hover-type">
-                        <a href="appoinment.html" class="d-inline-block w-100 text-center">Appointment</a>
+                     <div class="client-img">
+                        <img src="../asset/images/client2-img.png" alt="img">
                      </div>
-                  </section>
+                     <div class="client-img">
+                        <img src="../asset/images/client3-img.png" alt="img">
+                     </div>
+                  </div>
                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="sb-founder-section pt-5">
-                  <img src="../asset/images/founder-img2.png" alt="img">
-                  <section>
-                     <div class="sb-service-section2 bg-change2">
-                        <h6>Dr. Aimee Devlin</h6>
-                        <p>Psychiatrist</p>
+               <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                  <div class="slider-section w-100" style="margin-left: 50px">
+                     <div class="form-two-wrapper float-start">
+                        <div class="form-two" >
+                           <div class="col-md-7 col-lg-8">
+                              <div>
+                                 <form class="needs-validation" novalidate="">
+                                    <div class="row g-3">
+                                       <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="firstName" placeholder="Prénom" value="" required="">
+                                          <div class="invalid-feedback">  
+                                             Un prénom valide est requis.
+                                          </div>
+                                       </div>
+
+                                       <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="lastName" placeholder="Nom de famille" value="" required="">
+                                          <div class="invalid-feedback">  
+                                             Un nom de famille valide est requis.
+                                          </div>
+                                       </div>
+
+                                       <div class="col-12">
+                                          <label for="numero" class="form-label"></label>
+                                          <input type="numero" class="form-control" id="numero" placeholder="Numero de téléphone: +225 0701 0203 04" required="">
+                                          <div class="invalid-feedback">  
+                                             Veuillez saisir une adresse e-mail valide pour les mises à jour d'expédition.
+                                          </div>
+                                       </div>
+
+                                       <div class="col-md-5">
+                                          <label for="centreDeSante" class="form-label">Centre de sante</label>
+                                          <select class="form-select" id="centreDeSante" required="">
+                                             <option value="">  Choisir...</option>
+                                             <option>Clinique du Fablab</option>
+                                             <option>Hoppital General d'Adjamé</option>
+                                             <option>Centre Hospitalier Universitaire de Cocody</option>
+                                             <option>Centre Hospitalier Universitaire d'Angré</option>
+                                          </select>
+                                          <div class="invalid-feedback">  
+                                             Veuillez sélectionner un pays valide.
+                                          </div>
+                                       </div>
+
+                                       <div class="col-md-4">
+                                          <label for="service" class="form-label">  Services</label>
+                                          <select class="form-select" id="service" required="">
+                                             <option value="">  Choisir...</option>
+                                             <option>  Medecine Génerale</option>
+                                             <option>  Ophtamologie</option>
+                                             <option>  Dentiste</option>
+                                             <option>  Pediatrie</option>
+                                             <option>  Dermatologie</option>
+                                             <option>  Neurologie</option>
+                                             <option>  Rhumatologue</option>
+                                             <option>  ORL</option>
+                                          </select>
+                                          <div class="invalid-feedback">  
+                                             Veuillez fournir un état valide.
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <a href="contact-us.html" class="page2-btn">Valider mon rendez-vous</a>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                     <div class="hover-type">
-                        <a href="appoinment.html" class="d-inline-block w-100 text-center">Appointment</a>
-                     </div>
-                  </section>
+                  </div>
                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="sb-founder-section pt-5">
-                  <img src="../asset/images/founder-img3.png" alt="img">
-                  <section>
-                     <div class="sb-service-section2 bg-change2">
-                        <h6>Dr. Aimee Devlin</h6>
-                        <p>Psychiatrist</p>
-                     </div>
-                     <div class="hover-type">
-                        <a href="appoinment.html" class="d-inline-block w-100 text-center">Appointment</a>
-                     </div>
-                  </section>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-12 col-md-12 col-12">
-            <div class="text-center mt-5">
-               <a href="all-dr.html" class="page2-btn bg-change">See all Doctors</a>
             </div>
          </div>
       </div>
    </div>
-   <!-- index 02 page team section end -->
+   <!-- index 02 page client section end -->
+   <!-- index 02 page health section start -->
+   <div class="health-main-wrapper float_left">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+               <div class="sb-health-main-sec">
+                  <h4>Besoin de prendre soin de votre <br>Santé familiale</h4>
+                  <p class="my-4">Contactez-nous pour en savoir plus sur la façon dont nous pouvons<br>vous aider à améliorer votre santé.
+                  </p>
+                  <a href="service.html" class="page2-btn bg-white">EN SAVOIR PLUS</a>
+                  <a href="contact-us.html" class="page2-btn">NOUS CONTACTER</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--index- 02 page health section end  -->
    <!-- index 02 page gallery section start-->
    <div class="gallery-main-wrapper float_left">
       <div class="container">
@@ -486,227 +567,20 @@
             </div>
             <div class="col-lg-12 col-md-12 col-12">
                <div class="text-center mt-5">
-                  <a href="gallery.html" class="page2-btn bg-change">See all ../asset/Images</a>
+                  <a href="gallery.html" class="page2-btn bg-change">Voir plus Images</a>
                </div>
             </div>
          </div>
       </div>
    </div>
    <!-- index 02 page  gallery section End-->
-   <!-- index02 page Client section start -->
-   <div class="client2-main-wrapper float_left">
-      <div class="container">
-         <div class="row align-items-end">
-            <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
-               <div class="client-img">
-                  <img src="../asset/images/client2-img.png" alt="img">
-               </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12 col-12">
-               <div class="slider-section">
-                  <div class="page-2-heading mb-2 mt-5">
-                     <h4 class="text-color text-start set-margin">
-                        PRISE DE <span>RENDEZ-VOUS</span>
-                     </h4>
-                  </div>
-                  <div class="form-two-wrapper padd-100 float-start w-100">
-                     <div class="form-two">
-                        <form action="" method="post">
-                           <input type="text" name="name" placeholder="Nom et Prénoms *">
-                           <input type="email" name="mail" placeholder="Email *">
-                           <input type="tel" name="phone" placeholder="Telephone *">
-                           <textarea name="message" rows="3" cols="20" placeholder="Message"></textarea>
-                           <button type="submit" value="Submit" class="page2-btn">Envoyer</button>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- index 02 page client section end -->
-   <!-- index 02 page health section start -->
-   <div class="health-main-wrapper float_left">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-               <div class="sb-health-main-sec">
-                  <h4>Need to Take Care of Your <br> <span>Family Health</span></h4>
-                  <p class="my-4">It is a long established fact that a reader will be distracted by the
-                     readable<br>
-                     content of a page when looking at its layout.
-                  </p>
-                  <a href="service.html" class="page2-btn bg-white">View all service</a>
-                  <a href="contact-us.html" class="page2-btn">Contact Us</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!--index- 02 page health section end  -->
-   <!-- index 02 page blog section start -->
-   <div class="blog-main-wrapper news2-page-main float_left">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12 col-md-12 col sm-12 col-12">
-               <div class="sb-blog-main-section">
-                  <div class="page-2-heading">
-                     <h4 class="text-color">
-                        Popular <span>News</span>
-                     </h4>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="blog-box">
-                  <div class="img-icon">
-                     <img src="../asset/images/blog-img1.jpg" alt="img">
-                     <div class="img-overlay"></div>
-                     <p class="bg-blue text-center">08<br>
-                        july
-                     </p>
-                  </div>
-                  <div class="blog-content">
-                     <h3><a href="blog-single.html">Spending More and Getting Less
-                           for Health Care</a>
-                     </h3>
-                     <ul>
-                        <li><a href="javascript:;"><i class="far fa-user text-blue"></i> by
-                              John Doe</a>
-                        </li>
-                        <li><a href="javascript:;"><i class="far fa-comments text-blue"></i>Comments 02
-                           </a>
-                        </li>
-                     </ul>
-                     <p>It is a long established fact that a reader will be
-                        distracted by the readable content of a page
-                        when looking at its layout.
-                     </p>
-                     <a href="blog-single.html" class="r-btn text-blue">Read More</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="blog-box">
-                  <div class="img-icon">
-                     <img src="../asset/images/blog-img2.jpg" alt="img">
-                     <div class="img-overlay"></div>
-                     <p class="bg-blue text-center">20<br>
-                        july
-                     </p>
-                  </div>
-                  <div class="blog-content">
-                     <h3><a href="blog-single.html">Aliq is notm hendr erit a augue insu image
-                           pellen
-                           tes</a>
-                     </h3>
-                     <ul>
-                        <li><a href="javascript:;"><i class="far fa-user text-blue"></i> by
-                              John Doe</a>
-                        </li>
-                        <li><a href="javascript:;"><i class="far fa-comments text-blue"></i>Comments 02
-                           </a>
-                        </li>
-                     </ul>
-                     <p>It is a long established fact that a reader will be
-                        distracted by the readable content of a page
-                        when looking at its layout.
-                     </p>
-                     <a href="blog-single.html" class="r-btn text-blue">Read More</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-               <div class="blog-box">
-                  <div class="img-icon">
-                     <img src="../asset/../asset/images/blog-img3.jpg" alt="img">
-                     <div class="img-overlay"></div>
-                     <p class="bg-blue text-center">28<br>
-                        july
-                     </p>
-                  </div>
-                  <div class="blog-content">
-                     <h3><a href="blog-single.html">Brain damage is not caused by direct or
-                           Health Care</a>
-                     </h3>
-                     <ul>
-                        <li><a href="javascript:;"><i class="far fa-user text-blue"></i> by
-                              John Doe</a>
-                        </li>
-                        <li><a href="javascript:;"><i class="far fa-comments text-blue"></i>Comments 02
-                           </a>
-                        </li>
-                     </ul>
-                     <p>It is a long established fact that a reader will be
-                        distracted by the readable content of a page
-                        when looking at its layout.
-                     </p>
-                     <a href="blog-single.html" class="r-btn text-blue">Read More</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- index 02 page blog section end -->
-   <!--index 02 page partner section start -->
-   <div class="partner-main-wrapper bg-section-color float_left">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-               <div class="sb-partner-wrapper">
-                  <div class="owl-carousel owl-theme">
-                     <div class="item">
-                        <img src="../asset/../asset/images/p-logos1.png" alt="img">
-                     </div>
-                     <div class="item">
-                        <img src="../asset/../asset/images/p-logos2.png" alt="img">
-                     </div>
-                     <div class="item">
-                        <img src="../asset/../asset/images/p-logos3.png" alt="img">
-                     </div>
-                     <div class="item">
-                        <img src="../asset/../asset/images/p-logos4.png" alt="img">
-                     </div>
-                     <div class="item">
-                        <img src="../asset/../asset/images/p-logos5.png" alt="img">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- partner section start -->
-   <!-- partner section start -->
+   
    <!-- footer section start -->
    <!-- partner section start -->
    
    <!--Footer section start-->
         <?= $this->include('partials/footer'); ?>
    <!--Footer esction end-->
-
-   <script src="../asset/js/jquery-3.6.0.min.js"></script>
-   <script src="../asset/js/bootstrap.min.js"></script>
-   <script src="../asset/js/wow.js"></script>
-   <script src="../asset/js/jquery.magnific-popup.js"></script>
-   <script src="../asset/js/owl.carousel.min.js"></script>
-   <script src="../asset/js/contact_form.js"></script>
-   <script src="../asset/js/custom.js"></script>
-   <!-- custom js-->
-   <script>
-      wow = new WOW(
-         {
-            animateClass: 'animated',
-            offset: 100,
-            callback: function (box) {
-               console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-            }
-         }
-      );
-      wow.init();
-   </script>
 </body>
 
 </html>

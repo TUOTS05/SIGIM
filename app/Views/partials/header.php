@@ -6,7 +6,7 @@
             <div class="row">
                <div class="col-lg-3 col-md-3">
                   <div class="logo-wrapper2">
-                     <a href="javascript:;"> <img src="images/logo2.png" alt="img" heigth="auto" width="250px"></a>
+                     <a href="<?= base_url('/')?>"> <img src="../asset/images/logo2.png" alt="img" heigth="auto" width="250px"></a>
                   </div>
                </div>
                <div class="col-lg-9 col-md-9">
@@ -25,10 +25,8 @@
                         <li class="btn2">
                            <span class="text-light">
 
-                              <a href="<?= base_url('/Patient'); ?>">Espace patient</a>
 
-                              <a href="login.html">Connexion </a>/<a href="register.html"> s'inscrire</a>
-
+                              <a href="<?= base_url('/Patient'); ?>">Connexion </a>/<a href="<?= base_url('/Patient/register'); ?>"> s'inscrire</a>
                            </span>
                         </li>
                      </ul>
@@ -36,7 +34,7 @@
                   <div class="menu-section2">
                      <ul>
                         <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Accueil</a>
+                           <a class="nav-link" href="<?= base_url('/')?>">Accueil</a>
                         </li>
                         <li class="nav-item ps-rel">
                            <a class="nav-link" href="javascript:;">Dossier Medicale
@@ -83,17 +81,18 @@
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a href="about-us.html">About Us</a>
+                           <a href="<?= base_url('/apropo') ?>">Apropos</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="contact-us.html">Contact Us</a>
+                           <a class="nav-link" href="<?= base_url('/contact') ?>">Contacts</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">FAQ</a>
                         </li>
                         <li>
-                           <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                 class="fas fa-search"></i></a>
+                           <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              <i class="fas fa-search"></i>
+                           </a>
                         </li>
                         <li><a href="javascript:;" class="page2-btn">PRISE DE RENDEZ-VOUS</a></li>
                      </ul>
@@ -108,7 +107,7 @@
                <div class=" col-md-6 col-sm-6 col-6">
                   <div class="mobile-logo">
                      <a href="javascript:;">
-                        <img src="images/logo3.png" alt="img">
+                        <img src="../asset/images/logo1.png" alt="img" width="150" heigth="50">
                      </a>
                   </div>
                </div>
@@ -128,23 +127,21 @@
       </div>
       <div id="sidebar">
          <div class="sidebar_logo">
-            <a href="javascript:;"><img src="images/logo2.png" alt="img"></a>
+            <a href="javascript:;"><img src="../asset/images/logo2.png" alt="img" width="150" heigth="50"></a>
          </div>
          <div id="toggle_close">&times;</div>
          <div id='cssmenu'>
             <ul class="float_left">
+               <li><a href="<?= base_url('/')?>">Accueil</a></li>
                <li class="has-sub">
-                  <a href="javascript:;">Home</a>
+                  <a href="javascript:;">Dossier Médicale</a>
                   <ul>
-                     <li><a href="index.html">Home 01</a></li>
-                     <li><a href="index2.html">Home 02</a></li>
-                     <li><a href="index3.html">Home 03</a></li>
+                     <li><a href="client.html">Resultat d'examen</a></li>
+                     <li><a href="counter.html">Mes allergies</a></li>
+                     <li><a href="icon.html">Antécédents familiaux </a></li>
+
                   </ul>
                </li>
-               <li><a href="about-us.html">about</a></li>
-               <li><a href="all-dr.html">Doctors</a></li>
-               <li><a href="dr-single.html">Doctor Single</a></li>
-               <li><a href="appoinment.html">Appointment</a></li>
                <li class="has-sub">
                   <a href="javascript:;">Services</a>
                   <ul>
@@ -152,63 +149,10 @@
                      <li><a href="single-details.html">Service Details</a></li>
                   </ul>
                </li>
-               <li class="has-sub">
-                  <a href="javascript:;">Gallery</a>
-                  <ul>
-                     <li><a href="gallery.html">3 Columns</a></li>
-                     <li><a href="gallery2.html">4 Columns</a></li>
-                     <li><a href="gallery3.html">5 Columns</a></li>
-                  </ul>
-               </li>
-               <li class="has-sub">
-                  <a href="javascript:;">Blog</a>
-                  <ul>
-                     <li><a href="blog-left-sidebar.html">Blog Left-sidebar</a></li>
-                     <li><a href="blog-right-sidebar.html">Blog Right-sidebar</a></li>
-                     <li class="has-sub">
-                        <a class="sub-icon">Blog Single</a>
-                        <ul class="m-sub-dropdown">
-                           <li><a href="blog-single.html">Blog single</a></li>
-                           <li><a href="blog-single-slider.html">Blog single slider</a></li>
-                           <li><a href="blog-single-video.html">Blog single video</a></li>
-                        </ul>
-                     </li>
-                  </ul>
-               </li>
-               <li class="has-sub">
-                  <a href="javascript:;">Shortcode</a>
-                  <ul>
-                     <li><a href="accordion.html">Accordion</a></li>
-                     <li><a href="client.html">Client</a></li>
-                     <li><a href="counter.html">Counter</a></li>
-                     <li><a href="form.html">Form</a></li>
-                     <li><a href="alert.html">Alert</a></li>
-                     <li><a href="icon.html">Icon</a></li>
-                     <li><a href="list.html">List</a></li>
-                     <li><a href="pricing-table.html">Pricing Table</a></li>
-                     <li><a href="button.html">Button</a></li>
-                     <li><a href="tab.html">Tabs</a></li>
-                     <li><a href="team.html">Team</a></li>
-                     <li><a href="testimonials.html">Testimonial</a></li>
-                     <li><a href="portfolio.html">Portfolio</a></li>
-                     <li><a href="social-icon.html">Social Icon</a></li>
-                  </ul>
-               </li>
-               <li><a href="contact-us.html">contact us</a></li>
-               <li class="border-none"><a href="error404.html">404</a></li>
-               <li class="input-group border-none my-3 mx-2">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                        class="fas fa-search"></i></button>
-               </li>
-               <li class="border-none">
-                  <ul class="social-icon">
-                     <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                     <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
-                     <li><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                     <li><a href="www.pinterest.com"><i class="fab fa-pinterest-p"></i></a></li>
-                  </ul>
-               </li>
+               <li><a href="<?= base_url('apropo')?>">Apropos</a></li>
+               <li><a href="<?= base_url('contact') ?>">Contacts</a></li>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="javascript:;" class="page2-btn text-white">PRISE DE RENDEZ-VOUS</a></li>
             </ul>
          </div>
       </div>
