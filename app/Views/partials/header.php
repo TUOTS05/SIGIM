@@ -1,30 +1,19 @@
-<div id="preloader">
-      <div id="status">
-         <img src="asset/images/preloader.gif" id="preloader_image" alt="loader">
-      </div>
-   </div>
-   <!-- top to return -->
-   <a href="javascript:;" id="return-to-top" class="change-bg1"><i class="fas fa-angle-double-up"></i></a>
+ <!-- top to return -->
+ <a href="javascript:;" id="return-to-top" class="change-bg1"><i class="fas fa-angle-double-up"></i></a>
    <div class="main-header-wrapper2 float_left">
       <div class="sb-header-section2 d-xl-block d-lg-block d-md-none d-sm-none d-none">
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-md-3">
                   <div class="logo-wrapper2">
-                     <a href="javascript:;"> <img src="asset/images/sigim.png" alt="img"With="100 px" weight="100 px" ></a>
+                     <a href="javascript:;"> <img src="images/logo2.png" alt="img" heigth="auto" width="250px"></a>
                   </div>
                </div>
-               <div class="col-lg-9 col-md-9 ">
+               <div class="col-lg-9 col-md-9">
                   <div class="menu-top-section2">
                      <ul>
-                        <li>
-                           <a href="javascript:;"><span><i class="fas fa-map-marker-alt"></i></span>121 Waldeck
-                              Street, NY, USA</a>
-                        </li>
-                        <li>
-                           <a href="javascript:;"><span><i class="far fa-clock"></i></span>Mon-Sat: 9am to
-                              6pm</a>
-                        </li>
+                        <li><a href="javascript:;"><i class="fas fa-phone" style="margin-right: 10px"></i>+225 0701 0203 04</a></li>
+                        <li><a href="javascript:;"><i class="fas fa-envelope" style="margin-right: 10px"></i>fablab@uvci.edu.ci</a></li>
                         <li>
                            <ul class="">
                               <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
@@ -35,96 +24,43 @@
                         </li>
                         <li class="btn2">
                            <span class="text-light">
+<<<<<<< HEAD
                               <a href="<?= base_url('/Patient'); ?>">Espace patient</a>
+=======
+                              <a href="login.html">Connexion </a>/<a href="register.html"> s'inscrire</a>
+>>>>>>> refs/remotes/origin/master
                            </span>
                         </li>
-
-                        <li class="btn2">
-                           <span class="text-light">
-                              <a href="<?= base_url('#'); ?>">Rendez-vous</a>
-                           </span>
-                        </li>
-                        <!-- <li class="btn2">
-                           <span class="text-light">
-                              <a href="#">Login</a>
-                              /
-                              <a href="register.html">Register</a>
-                           </span>
-                        </li> -->
                      </ul>
                   </div>
                   <div class="menu-section2">
                      <ul>
                         <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Home
-                              <span><i class="fas fa-chevron-right"></i></span>
-                           </a>
-                           <ul class="dropdown-items">
-                              <li><a href="index.html">Home 01</a></li>
-                              <li><a href="index2.html">Home 02</a></li>
-                              <li><a href="index3.html">Home 03</a></li>
-                           </ul>
+                           <a class="nav-link" href="javascript:;">Accueil</a>
                         </li>
                         <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Pages
-                              <span><i class="fas fa-chevron-right"></i></span>
-                           </a>
-                           <ul class="dropdown-items">
-                              <li><a href="about-us.html">About Us</a></li>
-                              <li><a href="all-dr.html">Doctors</a></li>
-                              <li><a href="dr-single.html">Doctor single</a></li>
-                              <li><a href="appoinment.html">Appoinment</a></li>
-                              <li><a href="error404.html">404</a></li>
-                           </ul>
-                        </li>
-                        <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Shortcode
+                           <a class="nav-link" href="javascript:;">Dossier Medicale
                               <span><i class="fas fa-chevron-right"></i></span>
                            </a>
                            <div class="dropdown-items mega-menu">
                               <ul>
-                                 <li><a href="accordion.html">Accordion</a></li>
-                                 <li><a href="client.html">Client</a></li>
-                                 <li><a href="counter.html">Counter</a></li>
-                                 <li><a href="form.html">Form</a></li>
+                                 <li><a href="accordion.html">Derniére mise à jour</a></li>
+                                 <li><a href="client.html">Resultat d'examen</a></li>
+                                 <li><a href="counter.html">Mes allergies</a></li>
+                                 <li><a href="form.html">Groupe sanguin</a></li>
 
                               </ul>
                               <ul>
-                                 <li><a href="alert.html">Alert</a></li>
-                                 <li><a href="icon.html">Icon</a></li>
-                                 <li><a href="list.html">List</a></li>
-                                 <li><a href="pricing-table.html">Pricing Table</a></li>
+                                 <li><a href="alert.html">Historique médical </a></li>
+                                 <li><a href="icon.html">Antécédents familiaux </a></li>
+                                 <li><a href="list.html">Examens et tests, </a></li>
                               </ul>
                               <ul>
-                                 <li><a href="button.html">Button</a></li>
-                                 <li><a href="tab.html">Tabs</a></li>
-                                 <li><a href="team.html">Team</a></li>
-                                 <li><a href="testimonials.html">Testimonial</a></li>
-                              </ul>
-                              <ul>
-                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                 <li><a href="social-icon.html">Social Icon</a></li>
+                                 <li><a href="#">Traitement en cours</a></li>
+                                 <li><a href="#">Tous sur moi</a></li>
+                                 <li><a href="pricing-table.html">Allergies </a></li>
                               </ul>
                            </div>
-                        </li>
-                        <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Blog
-                              <span><i class="fas fa-chevron-right"></i></span>
-                           </a>
-                           <ul class="dropdown-items">
-                              <li><a href="blog-left-sidebar.html">Blog Left-sidebar</a></li>
-                              <li><a href="blog-right-sidebar.html">Blog Right-sidebar</a></li>
-                              <li>
-                                 <a href="javascript:;">Blog-single
-                                    <span><i class="fas fa-chevron-right"></i></span>
-                                 </a>
-                                 <ul class="sub-dropdown">
-                                    <li><a href="blog-single.html">Blog single</a></li>
-                                    <li><a href="blog-single-slider.html">Blog single slider</a></li>
-                                    <li><a href="blog-single-video.html">Blog single video</a></li>
-                                 </ul>
-                              </li>
-                           </ul>
                         </li>
                         <li class="nav-item ps-rel">
                            <a class="nav-link" href="javascript:;">Services
@@ -146,24 +82,20 @@
                               <li><a href="single-details.html">Service Details</a></li>
                            </ul>
                         </li>
-                        <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Gallery
-                              <span><i class="fas fa-chevron-right"></i></span>
-                           </a>
-                           <ul class="dropdown-items">
-                              <li><a href="gallery.html">3 Columns</a></li>
-                              <li><a href="gallery2.html">4 Columns</a></li>
-                              <li><a href="gallery3.html">5 Columns</a></li>
-                           </ul>
+                        <li class="nav-item">
+                           <a href="about-us.html">About Us</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">FAQ</a>
                         </li>
                         <li>
                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                  class="fas fa-search"></i></a>
                         </li>
-                        <li><a href="javascript:;" class="page2-btn">Book Now</a></li>
+                        <li><a href="javascript:;" class="page2-btn">PRISE DE RENDEZ-VOUS</a></li>
                      </ul>
                   </div>
                </div>
