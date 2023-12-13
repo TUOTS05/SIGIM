@@ -150,8 +150,8 @@
 
 
                                                 <div class="form-group mb-2">
-                                                    <label class="form-label" for="date">Poids</label>
-                                                    <input type="text" class="form-control bg-light fw-bold" id="date" value="<?= $patient['poids']; ?>" name="poids" placeholder="Enter email">
+                                                    <label class="form-label" for="poids">Poids</label>
+                                                    <input type="text" class="form-control bg-light fw-bold" id="poids" value="<?= $patient['poids']; ?>" name="poids" placeholder="Enter email">
                                                     <span class="text-danger">
                                                         <?= isset($validation) ? display_form_errors($validation, 'poids') : '' ?>
                                                     </span>
@@ -206,8 +206,6 @@
     <!-- App js -->
     <script type="text/javascript" src="../assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-
 
 
 

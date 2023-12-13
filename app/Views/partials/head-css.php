@@ -16,3 +16,4 @@
    <link rel="stylesheet" type="text/css" href="../asset/css/owl.theme.default.min.css" />
    <link rel="stylesheet" type="text/css" href="../asset/css/style.css" />
    <link rel="stylesheet" type="text/css" href="../asset/css/responsive.css" />
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>

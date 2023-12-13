@@ -19,6 +19,7 @@ class PatientModel extends Model
         "sexe",
         "telephone",
         "email",
+<<<<<<< HEAD
         "groupe_sanguin",
         "taille",
         "poids",
@@ -26,10 +27,15 @@ class PatientModel extends Model
         "note",
         "mdp",
 
+=======
+        "mdp",
+        "lien",
+        "status"
+>>>>>>> origin
     ];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
