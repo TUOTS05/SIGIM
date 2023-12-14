@@ -9,6 +9,8 @@ use CodeIgniter\Router\RouteCollection;
   // la page d'accueil du site sigim----------------------
 
 $routes->get('/', 'Home::index');
+$routes->get('/contact','Home::contact');
+$routes->get('/apropo','Home::apropo');
 
 $routes->get('/Patient', 'Patient::login');
 $routes->get('/Patient/register', 'Patient::register');
