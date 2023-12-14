@@ -12,11 +12,11 @@ class Patient extends BaseController
 
         // return view('Frontend/Patient/login');
 
-        if (isset(session('patient')['id'])) {
-            return view('/Patient/index');
-        } else {
-            return redirect()->to(base_url('/Patient/login'));
-        }
+        // if (isset(session('patient')['id'])) {
+        //     return view('/Patient/index');
+        // } else {
+        //     return redirect()->to(base_url('/Patient/login'));
+        // }
         //
     }
     

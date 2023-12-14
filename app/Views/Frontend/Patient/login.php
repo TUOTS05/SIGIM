@@ -13,7 +13,7 @@
             <div class="col-lg-6 col-md-12 col-12 p-0">
                <div class="form-sidebar">
                   <div class="logo-section">
-                     <img src="../asset/images/logo3.png" alt="img">
+                     <img src="../asset/images/sigim.png" alt="img">
                   </div>
                   <div class="form-image d-xl-block d-lg-block d-none">
                      <img src="../asset/images/form-img.png" alt="img">
