@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    // ACCUEIL KOUAME
     public function index(): string
     {
         return view('Frontend/Accueil/index');
@@ -16,4 +17,5 @@ class Home extends BaseController
     {
         return view('Frontend/Accueil/apropos');
     }
+    // FIN ACCUEIL
 }
