@@ -244,8 +244,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="sb-emergency-main-wrapper ">
                   <div class="content">
-                     <span><i class="fas fa-headphones-alt"></i></span>
-                     <h4>Emergency <br> Medical Care 24/7</h4>
+                     <span><i class="fas fa-exclamation-triangle"></i></span>
+                     <h4>Le Bouton<br> Alert (Urgence)</h4>
                   </div>
                   <h5>With access to 24 hour emergency assistance, It’s so
                      important you can continue to help others.
