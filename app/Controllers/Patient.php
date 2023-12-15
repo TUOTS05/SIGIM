@@ -54,12 +54,10 @@ class Patient extends BaseController
             } else {
                 echo "Mot de passe incorrect";
 
-                return redirect()->to(base_url('/Patient/login'));
+                return redirect()->to(base_url('/Patient'));
             }
         } else {
-
-
-        
+            return redirect()->to(base_url('/Patient'))->with("fail", "Mot de passe ou Email incorrect");;
         }
     }
 
@@ -214,5 +212,21 @@ class Patient extends BaseController
             return redirect()->to(base_url('/Patient'));
         }
 
+    }
+
+    public function barcode_qrcode(){
+        $mpdf = new \Mpdf\Mpdf([
+            'mode' => 'utf-8',
+            'format' => [279, 216],
+            'orientation' => 'P'
+            ]);
+            $html = file_get_contents("http://localhost:8000/api/barcode");
+            $id = session('patient')["id"];
+            $patient = new PatientModel();
+            $infos=$patient->where('id',$id)->first();
+            $view = view('Patient/QRCodeBarcode', compact('infos'));
+            $filename = "QRCODEBARCODE".time().'.pdf';
+            $mpdf->WriteHTML($view);
+            $mpdf->Output($filename,"I"); 
     }
 }

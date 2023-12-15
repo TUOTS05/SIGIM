@@ -23,10 +23,14 @@
             <div class="col-lg-6 col-md-12 col-12 p-0">
                <div class="login-main">
                   <form action="<?= base_url('/Patient/login_patient'); ?>" method="post">
-                     <h4>Bienvenue</h4>
-                     <p class="mb-3">Connectez-vous en saisissant les informations ci-dessous</p>
-                     <div class="mt-2">
-                        <input type="text" name="email" class="my-width" placeholder="UserName*">
+                  <h4>Bienvenue</h4>
+                  <p class="mb-3">Connectez-vous en saisissant les informations ci-dessous</p>
+                  <div class="mt-2">
+                     <?php csrf_field(); ?>
+                        <?php if (!empty(session()->getFlashdata('fail'))): ?>
+                           <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                     <?php endif ?> 
+                     <input type="text" name="email" class="my-width" placeholder="UserName*">
                      </div>
                      <div class="mt-2">
                         <input type="password" name="password" class="my-width" placeholder="Password*">
@@ -80,6 +84,22 @@
    <script src="../asset/js/custom.js"></script>
    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
    <!-- custom js-->
+            <script>
+               // Attendez que le DOM soit prêt
+               document.addEventListener("DOMContentLoaded", function () {
+                  // Obtenir l’élément de message de réussite
+                  const successMessage = document.querySelector('.alert-danger');
+
+                  // Vérifier si le message de réussite existe
+                  if (successMessage) {
+                        // Définir un délai d’expiration pour masquer le message de réussite après 20 secondes (20000 millisecondes)
+                        setTimeout(function () {
+                           successMessage.style.display = 'none';
+                        }, 20000);
+                  }
+               });
+            </script>
+
    <script>
       $(document).ready(function(){
          <?php if (session()->getFlashdata('status')) { ?>

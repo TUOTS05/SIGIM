@@ -119,17 +119,17 @@
             <!-- custom js-->
 
             <script>
-               // Wait for the DOM to be ready
+               // Attendez que le DOM soit prêt
                document.addEventListener("DOMContentLoaded", function () {
-                  // Get the success message element
+                  // Obtenir l’élément de message de réussite
                   const successMessage = document.querySelector('.alert-success');
 
-                  // Check if the success message exists
+                  // Vérifier si le message de réussite existe
                   if (successMessage) {
-                        // Set a timeout to hide the success message after 20 seconds (1000 milliseconds)
+                        // Définir un délai d’expiration pour masquer le message de réussite après 20 secondes (20000 millisecondes)
                         setTimeout(function () {
                            successMessage.style.display = 'none';
-                        }, 1000);
+                        }, 20000);
                   }
                });
             </script>
