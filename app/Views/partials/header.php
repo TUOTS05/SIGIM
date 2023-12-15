@@ -37,26 +37,26 @@
                            <a class="nav-link" href="<?= base_url('/')?>">Accueil</a>
                         </li>
                         <li class="nav-item ps-rel">
-                           <a class="nav-link" href="javascript:;">Dossier Medicale
+                           <a class="nav-link" href="<?= base_url('/Patient'); ?>">Dossier Medicale
                               <span><i class="fas fa-chevron-right"></i></span>
                            </a>
                            <div class="dropdown-items mega-menu">
                               <ul>
-                                 <li><a href="accordion.html">Derniére mise à jour</a></li>
-                                 <li><a href="client.html">Resultat d'examen</a></li>
-                                 <li><a href="counter.html">Mes allergies</a></li>
-                                 <li><a href="form.html">Groupe sanguin</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Derniére mise à jour</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>l">Resultat d'examen</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Mes allergies</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Groupe sanguin</a></li>
 
                               </ul>
                               <ul>
-                                 <li><a href="alert.html">Historique médical </a></li>
-                                 <li><a href="icon.html">Antécédents familiaux </a></li>
-                                 <li><a href="list.html">Examens et tests, </a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Historique médical </a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Antécédents familiaux </a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Examens et tests, </a></li>
                               </ul>
                               <ul>
-                                 <li><a href="#">Traitement en cours</a></li>
-                                 <li><a href="#">Tous sur moi</a></li>
-                                 <li><a href="pricing-table.html">Allergies </a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Traitement en cours</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Tous sur moi</a></li>
+                                 <li><a href="<?= base_url('/Patient'); ?>">Allergies </a></li>
                               </ul>
                            </div>
                         </li>
@@ -94,7 +94,7 @@
                               <i class="fas fa-search"></i>
                            </a>
                         </li>
-                        <li><a href="javascript:;" class="page2-btn">PRISE DE RENDEZ-VOUS</a></li>
+                        <li><a href="<?= base_url('/Patient'); ?>" class="page2-btn">PRISE DE RENDEZ-VOUS</a></li>
                      </ul>
                   </div>
                </div>
@@ -152,7 +152,7 @@
                <li><a href="<?= base_url('apropo')?>">Apropos</a></li>
                <li><a href="<?= base_url('contact') ?>">Contacts</a></li>
                <li><a href="#">FAQ</a></li>
-               <li><a href="javascript:;" class="page2-btn text-white">PRISE DE RENDEZ-VOUS</a></li>
+               <li><a href="<?= base_url('/Patient'); ?>" class="page2-btn text-white">PRISE DE RENDEZ-VOUS</a></li>
             </ul>
          </div>
       </div>
