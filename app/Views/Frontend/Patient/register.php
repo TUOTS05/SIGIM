@@ -14,7 +14,7 @@
                      <div class="col-lg-6 col-md-12 col-12 p-0">
                         <div class="form-sidebar">
                            <div class="logo-section">
-                              <img src="../asset/images/sigim.png" alt="img">
+                              <a href="<?= base_url('/')?>"><img src="../asset/images/logo1.png" alt="img" heigth="auto" width="230px"></a>
                            </div>
                            <div class="form-image d-xl-block d-lg-block d-none">
                               <img src="../asset/images/form-img.png"  alt="img">
@@ -55,7 +55,7 @@
                                     </span>
                                  </div>
                                  <div class=" col-md-6 mt-4">
-                                    <select name="sexe" id="sexe" class="form-select" value="<?= set_value('sexe'); ?>">
+                                    <select name="sexe" id="sexe" class="form-select " value="<?= set_value('sexe'); ?>">
                                        <option value="" selected disabled hidden>Sexe *</option>
                                        <option value="Masculin">Masculin</option>
                                        <option value="Feminin">Feminin</option>
@@ -79,13 +79,13 @@
                                  </span>
                               </div>
                               <div class="col-md-6 mt-2">
-                                 <input type="password" class="my-width" name="password" placeholder="Password*" value="<?= set_value('password'); ?>">
+                                 <input type="password" class="my-width" name="password" placeholder="Mot de passe*" value="<?= set_value('password'); ?>">
                                  <span class="text-danger text-sm">
                                     <?= isset($validation)? display_form_errors($validation, 'password'): '' ?>
                                  </span>
                               </div>
                               <div class="col-md-6 mt-2">
-                                 <input type="password" class="my-width" name="confirm_password" placeholder="Confirm Password*" value="<?= set_value('confirm_password'); ?>">
+                                 <input type="password" class="my-width" name="confirm_password" placeholder="confirmer le mot de passe*" value="<?= set_value('confirm_password'); ?>">
                                  <span class="text-danger text-sm">
                                     <?= isset($validation)? display_form_errors($validation, 'confirm_password'): '' ?>
                                  </span>
@@ -93,11 +93,11 @@
                            </div>
                               
                               
-                           <div class="col-md-6 mt-2">
+                           <div class="col-md-6 mt-2 w-100">
                               <input type="checkbox" id="accept" class="me-2">
                               <label for="accept">Oui, je comprends et je suis d’accord avec les <a href="javascript:;" class="text-color-pink">Termes et conditions</a>.</label>
                            </div>
-                              <button type="submit" class="button-btn mt-4 text-capitalize">Registre
+                              <button type="submit" class="button-btn mt-4 text-capitalize">S'enregistrer
                               <span><i class="fas fa-angle-double-right"></i></span>
                               </button>
                               <p class="mt-2">Vous avez déjà un compte. <a href="<?= base_url('/Patient'); ?>" class="text-color-pink">Connectez-vous maintenant</a></p>
