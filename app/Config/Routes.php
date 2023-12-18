@@ -6,6 +6,10 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+
+
+
+
   // la page d'accueil du site sigim----------------------
 
 $routes->get('/', 'Home::index');
@@ -30,6 +34,7 @@ $routes->get('/Prosante', 'Prosante::index');
 $routes->get('/Prosante/login', 'Prosante::login');
 $routes->post('/Prosante/login', 'Prosante::login');
 
+
 // inscription du dashboard du professionnel de sante
 $routes->get('/Prosante/register', 'Prosante::register');
 $routes->post('/Prosante/register', 'Prosante::register');
@@ -42,10 +47,29 @@ $routes->get('/Prosante/logout', 'Prosante::logout');
 
 
 
-# Routes pour les Admins------------------------------------------------
+# Routes pour les Hopitaux------------------------------------------------
 
-// $routes->get('/login', 'User::index');
-// $routes->get('/Admin', 'AdminController::index');
-// $routes->get('/Admin/register', 'User::register');
-// $routes->post('/Admin/storeUser', 'User::storeUser');
-// $routes->post('/Admin/login', 'User::login');
+$routes->get('/Hopital', 'Hopital::login');
+$routes->get('/Hopital/register', 'Hopital::register');
+$routes->post('/Hopital/save_hopital', 'Hopital::saveHopital');
+$routes->post('/Hopital/login_hopital', 'Hopital::loginHopital');
+$routes->get('Hopital/activate/(:any)', 'Hopital::activate/$1');
+
+$routes->get('/Hopital/dash', 'Hopital::dash');
+$routes->get('/Hopital/page-profile', 'Hopital::profile');
+$routes->get('/Hopital/logout', 'Hopital::logout');
+
+
+
+# Routes pour les Fablab------------------------------------------------
+
+$routes->get('/Fablab', 'Fablab::login');
+$routes->get('/Fablab/register', 'Fablab::register');
+$routes->post('/Fablab/save_fablab', 'Fablab::saveFablab');
+$routes->post('/Fablab/login_fablab', 'Fablab::loginFablab');
+$routes->get('/Fablab/activate/(:any)', 'Fablab::activate/$1');
+
+
+$routes->get('/Fablab/dash', 'Fablab::dash');
+$routes->get('/Fablab/page-profile', 'Fablab::profile');
+$routes->get('/Fablab/logout', 'Fablab::logout');

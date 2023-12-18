@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PatientModel extends Model
+class FablabModel extends Model
 {
-    protected $table            = 'patient';
+    protected $table            = 'fablabs';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
@@ -15,22 +15,15 @@ class PatientModel extends Model
     protected $allowedFields    = [
         "nom",
         "prenom",
-        "date_de_naissance",
-        "sexe",
-        "telephone",
+        "service",
         "email",
-        "groupe_sanguin",
-        "taille",
-        "poids",
-        "allergie",
-        "note",
         "mdp",
         "lien",
         "status"
     ];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

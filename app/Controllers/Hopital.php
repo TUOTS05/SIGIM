@@ -2,20 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\HopitalModel;
 use App\Controllers\BaseController;
-use App\Models\PatientModel;
 
-class Patient extends BaseController
+class Hopital extends BaseController
 {
     public function __construct()
     {
 
-        // return view('Frontend/Patient/login');
+        // return view('Backend/Hopital/login');
 
         // if (isset(session('patient')['id'])) {
-        //     return view('/Patient/index');
+        //     return view('/Hopital/index');
         // } else {
-        //     return redirect()->to(base_url('/Patient/login'));
+        //     return redirect()->to(base_url('/Hopital/login'));
         // }
         //
     }
@@ -23,38 +23,38 @@ class Patient extends BaseController
 
     public function login()
     {
-        return view('Frontend/Patient/login');
+        return view('Backend/Hopital/login');
     }
 
 
     public function register()
     {
-        return view('Frontend/Patient/register');
+        return view('Backend/Hopital/register');
     }
 
     # Fonction de connexion au dashboard patient --------------
 
-    public function loginPatient()
+    public function loginHopital()
     {
 
         //
-        $patients = new PatientModel();
+        $hopital = new HopitalModel();
 
         $email =  $this->request->getVar('email');
         $mdp = $this->request->getVar('password');
 
-        $user = $patients->where('email', $email)->first();
+        $user = $hopital->where('email', $email)->first();
 
         if ($user) {
             if (password_verify($mdp, $user['mdp'])) {
 
-                session()->set('patient', $user);
+                session()->set('hopital', $user);
 
-                return redirect()->to(base_url('/Patient/dash'));
+                return redirect()->to(base_url('/Hopital/dash'));
             } else {
                 echo "Mot de passe incorrect";
 
-                return redirect()->to(base_url('/Patient/login'));
+                return redirect()->to(base_url('/Hopital/login'));
             }
         } else {
 
@@ -67,30 +67,28 @@ class Patient extends BaseController
 
     public function dash()
     {
-         if(isset(session('patient')['id']))
+         if(isset(session('hopital')['id']))
         {
-            $patients = new PatientModel();
-            $data['patient'] = $patients->findAll();
-           return view('Frontend/Patient/dash', $data);
+            $hopital = new HopitalModel();
+            $data['hopital'] = $hopital->findAll();
+           return view('Backend/Hopital/index', $data);
         }
         else{
-            return redirect()->to(base_url('/Patient'));
+            return redirect()->to(base_url('/Hopital'));
         }
     }
 
 # ----- Enregistrement des informations du patient dans la base de données--------------
 
-    public function savePatient()
+    public function saveHopital()
     {
         $rules = [
             'nom' => 'required|min_length[3]|max_length[20]',
             'prenom' => 'required|min_length[3]|max_length[20]',
-            'date' => 'required',
-            'sexe' => 'required',
-            'tel' => 'required|max_length[10]',
-            'email' => 'required|min_length[6]|max_length[100]|valid_email|is_unique[patient.email]',
-            'password' => 'required|min_length[8]|max_length[255]',
-            'confirm_password' => 'required|matches[password]',
+            'service' => 'required|min_length[3]|max_length[20]',
+            'email' => 'required|min_length[6]|max_length[100]|valid_email|is_unique[hopitals.email]',
+            'mdp' => 'required|min_length[8]|max_length[255]',
+            'mdp_c' => 'required|matches[mdp]',
         ];
     
         $messages = [
@@ -98,68 +96,57 @@ class Patient extends BaseController
                 'required' => 'Le champ nom est requis.',
                 'min_length' => 'Le nom doit avoir au moins 3 caractères.',
                 'max_length' => 'Le nom ne peut pas dépasser 20 caractères.'
-             ],
+            ],
             'prenom' => [
                 'required' => 'Le champ prenom est requis.',
                 'min_length' => 'Le prenom doit avoir au moins 3 caractères.',
                 'max_length' => 'Le prenom ne peut pas dépasser 20 caractères.'
-             ],
-
-            'date' => [
-                'required' => 'Le champ date est requis.',
-             ],
-
-            'sexe' => [
-                'required' => 'Le champ sexe est requis.',
-             ],
-             
-            'tel' => [
-                'required' => 'Le champ tel est requis.',
-                'min_length' => 'Le tel doit avoir au moins 8 caractères.',
-                'max_length' => 'Le tel ne peut pas dépasser 10 caractères.'
-             ],
+            ],
+            'service' => [
+                'required' => 'Le champ prenom est requis.',
+                'min_length' => 'Le prenom doit avoir au moins 3 caractères.',
+                'max_length' => 'Le prenom ne peut pas dépasser 20 caractères.'
+            ],
 
             'email' => [
                 'required' => 'Le champ email est requis et doit être valide.',
-             ],
+            ],
 
-            'password' => [
+            'mdp' => [
                 'required' => 'Le champ password est requis.',
                 'min_length' => 'Le password doit avoir au moins 8 caractères.',
                 'max_length' => 'Le password ne peut pas dépasser 20 caractères.'
-             ],
+            ],
 
-            'confirm_password' => [
+            'mdp_c' => [
                 'required' => 'Le champ confirm_password est requis.',
                 'min_length' => 'Le confirm_password doit avoir au moins 8 caractères.',
                 'max_length' => 'Le confirm_password ne peut pas dépasser 20 caractères.'
-             ],
+            ],
         ];
     
         if (!$this->validate($rules, $messages)) {
-            return view('Frontend/Patient/register', ['validation' => $this->validator]);
+            return view('Backend/Hopital/register', ['validation' => $this->validator]);
         }
         else {
-            $patients = new PatientModel();
+            $hopital = new HopitalModel();
             $token = bin2hex(random_bytes(20));
             $data = [
                 'nom' => $this->request->getVar('nom'),
                 'prenom' => $this->request->getVar('prenom'),
-                'date_de_naissance' => $this->request->getVar('date'),
-                'sexe' => $this->request->getVar('sexe'),
-                'telephone' => $this->request->getVar('tel'),
+                'service' => $this->request->getVar('service'),
                 'email' => $this->request->getVar('email'),
-                'mdp' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+                'mdp' => password_hash($this->request->getVar('mdp'), PASSWORD_BCRYPT),
                 'lien' => $token,
                 ];
         }
 
-        $message = "Merci de votre inscription. Activer votre compte".anchor(uri:'/Patient/activate/'.$data['lien'], title:' Activer maintenant', attributes:'');
+        $message = "Merci de votre inscription. Activer votre compte".anchor(uri:'/Hopital/activate/'.$data['lien'], title:' Activer maintenant', attributes:'');
         
-        $query = $patients->insert($data);
+        $query = $hopital->insert($data);
         
         if (!$query) {
-            return redirect()->back('/Patient/register')->with("fail", "quelque chose s'est mal pasesée");
+            return redirect()->back('/Hopital/register')->with("fail", "quelque chose s'est mal pasesée");
         }else{
             $to = $this->request->getVar('email');
             $email = \Config\Services::email();
@@ -172,19 +159,19 @@ class Patient extends BaseController
                 print_r($data); 
             }
             //$this->sendConfirmationEmail($data['email']);
-            return redirect()->to(base_url('/Patient/register'))->with("success", "Votre compte a été crée avec succés");
+            return redirect()->to(base_url('/Hopital/register'))->with("success", "Votre compte a été crée avec succés");
     }
 
 
     public function activate($token)
     {
-        $patient = new PatientModel();
-        $verifToken = $patient->where('lien', $token)->findAll();
+        $hopital = new HopitalModel();
+        $verifToken = $hopital->where('lien', $token)->findAll();
         if (count($verifToken) > 0) {
             $data['status'] = 1;
-            $activatePatient = $patient->update($verifToken[0]['id'], $data);
-            if ($activatePatient) {
-                return redirect()->to('/Patient')->with('success','Votre compte a été activé, vous pouvez maintenant vous connecter.');
+            $activateHopital = $hopital->update($verifToken[0]['id'], $data);
+            if ($activateHopital) {
+                return redirect()->to('/Hopital')->with('success','Votre compte a été activé, vous pouvez maintenant vous connecter.');
             }
         }
         else{
@@ -195,23 +182,23 @@ class Patient extends BaseController
     
     public function profile()
     {
-        if(isset(session('patient')['id']))
+        if(isset(session('hopital')['id']))
         {
-            return view('/Patient/page-profile');
+            return view('/Hopital/page-profile');
         }else{
-            return redirect()->to(base_url('/Patient'));
+            return redirect()->to(base_url('/Hopital'));
         }
     }
 
 
     public function logout(){
-        if(isset(session('patient')['id']))
+        if(isset(session('hopital')['id']))
         {
             session()->destroy();
-            return redirect()->to(base_url('/Patient'));
+            return redirect()->to(base_url('/Hopital'));
         }
         else{
-            return redirect()->to(base_url('/Patient'));
+            return redirect()->to(base_url('/Hopital'));
         }
 
     }

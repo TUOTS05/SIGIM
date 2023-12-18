@@ -5,9 +5,9 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <?= $this->include('layouts-patient/title-meta'); ?>
+    <?= $this->include('layouts-hopital/title-meta'); ?>
     
-    <?= $this->include('layouts-patient/head-css'); ?>
+    <?= $this->include('layouts-hopital/head-css'); ?>
 </head>
 
 <body id="body" class="auth-page" style="background-image: url('../assets/images/p-1.png'); background-size: cover; background-position: center center;">
@@ -29,10 +29,10 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-0">                                    
-                                    <form class="my-4" action="<?= base_url('/Admin/login'); ?>" method="post">            
+                                    <form class="my-4" action="<?= base_url('/Hopital/login_hopital'); ?>" method="post">            
                                         <div class="form-group mb-2">
                                             <label class="form-label" for="username">Username</label>
-                                            <input type="text" class="form-control" id="username" name="email" placeholder="Enter username">                               
+                                            <input type="email" class="form-control" id="username" name="email" placeholder="Enter username">                               
                                         </div><!--end form-group--> 
             
                                         <div class="form-group">
@@ -61,7 +61,7 @@
                                         </div> <!--end form-group-->                           
                                     </form><!--end form-->
                                     <div class="m-3 text-center text-muted">
-                                        <p class="mb-0">Vous n’avez pas de compte ?  <a href="<?= base_url('/Admin/register'); ?>" class="text-primary ms-2">S’inscrire gratuitement</a></p>
+                                        <p class="mb-0">Vous n’avez pas de compte ?  <a href="<?= base_url('/Hopital/register'); ?>" class="text-primary ms-2">S’inscrire gratuitement</a></p>
                                     </div> 
                                     
                                     
