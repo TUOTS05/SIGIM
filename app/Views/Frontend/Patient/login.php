@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="zxx" dir="ltr">
 
 <head>
    <?= $this->include('partials/head-css'); ?>
@@ -13,7 +12,7 @@
             <div class="col-lg-6 col-md-12 col-12 p-0">
                <div class="form-sidebar">
                   <div class="logo-section">
-                     <img src="../asset/images/sigim.png" alt="img">
+                     <a href="<?= base_url('/')?>"><img src="../asset/images/logo1.png" alt="img" heigth="auto" width="230px"></a>
                   </div>
                   <div class="form-image d-xl-block d-lg-block d-none">
                      <img src="../asset/images/form-img.png" alt="img">
@@ -23,37 +22,33 @@
             <div class="col-lg-6 col-md-12 col-12 p-0">
                <div class="login-main">
                   <form action="<?= base_url('/Patient/login_patient'); ?>" method="post">
-                  <h4>Bienvenue</h4>
-                  <p class="mb-3">Connectez-vous en saisissant les informations ci-dessous</p>
-                  <div class="mt-2">
-                     <?php csrf_field(); ?>
+                     <h4>Content de vous revoir</h4>
+                     <p class="mb-3">Connectez-vous en saisissant les informations ci-dessous</p>
+                     <div class="mt-2">
+                        <?php csrf_field(); ?>
                         <?php if (!empty(session()->getFlashdata('fail'))): ?>
                            <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-                     <?php endif ?> 
-                     <input type="text" name="email" class="my-width" placeholder="UserName*">
+                        <?php endif ?> 
+                        <input type="text" class="my-width" placeholder="Identifiant*">
                      </div>
                      <div class="mt-2">
-                        <input type="password" name="password" class="my-width" placeholder="Password*">
+                        <input type="password" class="my-width" placeholder="Mot de passe*">
                      </div>
-                     <ul class="form-media">
+                     <ul class="">
                         <li>
                            <input type="checkbox" name="remember" id="confirm">
-                           <label for="confirm">Souvenez-vous de moi</label>
+                           <label for="confirm">Se souviens de moi</label>
                         </li>
-                        <li><a href="javascript:;">
-                        Vous avez oublié Passsword ?
-                           </a>
+                        <li><a href="javascript:;">Mot de passe oublié?</a>
                         </li>
                      </ul>
                      <div class="d-flex align-items-baseline ">
                         <button type="submit" class="button-btn mt-4 text-capitalize">Connectez-vous
-                        <span><i class="fas fa-angle-double-right"></i></span>
+                           <span><i class="fas fa-angle-double-right"></i></span>
                         </button>
-                           
-                       
                         <a href="<?= base_url('/Patient/register'); ?>" class="ms-4 form-resp-display">Créer un compte</a>
                      </div>
-                     <p class="mt-3"> Ou vous pouvez vous joindre à</p>
+                     <p class="mt-3">Conecteez-vous avec : </p>
                      <ul class="form-media">
                         <li><a href="javascript:;">
                            <i class="fab fa-facebook"></i>
@@ -82,23 +77,34 @@
    <script src="../asset/js/owl.carousel.min.js"></script>
    <script src="../asset/js/contact_form.js"></script>
    <script src="../asset/js/custom.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
    <!-- custom js-->
-            <script>
-               // Attendez que le DOM soit prêt
-               document.addEventListener("DOMContentLoaded", function () {
-                  // Obtenir l’élément de message de réussite
-                  const successMessage = document.querySelector('.alert-danger');
+   <script>
+      wow = new WOW(
+         {
+            animateClass: 'animated',
+            offset: 100,
+            callback: function (box) {
+               console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+         }
+      );
+      wow.init();
+   </script>
+   <script>
+      // Attendez que le DOM soit prêt
+      document.addEventListener("DOMContentLoaded", function () {
+         // Obtenir l’élément de message de réussite
+         const successMessage = document.querySelector('.alert-danger');
 
-                  // Vérifier si le message de réussite existe
-                  if (successMessage) {
-                        // Définir un délai d’expiration pour masquer le message de réussite après 20 secondes (20000 millisecondes)
-                        setTimeout(function () {
-                           successMessage.style.display = 'none';
-                        }, 20000);
-                  }
-               });
-            </script>
+         // Vérifier si le message de réussite existe
+         if (successMessage) {
+               // Définir un délai d’expiration pour masquer le message de réussite après 20 secondes (20000 millisecondes)
+               setTimeout(function () {
+                  successMessage.style.display = 'none';
+               }, 20000);
+         }
+      });
+   </script>
 
    <script>
       $(document).ready(function(){
