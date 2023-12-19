@@ -180,4 +180,5 @@ class App extends BaseConfig
     # Temps d'expiration de la session
 
     public $sessionExpiration = 7200;
+    
 }

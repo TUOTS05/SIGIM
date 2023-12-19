@@ -21,8 +21,8 @@ class PatientModel extends Model
         "email",
         "mdp",
         "lien",
-        "status"
-
+        "status",
+        "qr_image"
     ];
 
     // Dates

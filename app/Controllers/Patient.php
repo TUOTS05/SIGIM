@@ -7,19 +7,6 @@ use App\Models\PatientModel;
 
 class Patient extends BaseController
 {
-    public function __construct()
-    {
-
-        // return view('Frontend/Patient/login');
-
-        // if (isset(session('patient')['id'])) {
-        //     return view('/Patient/index');
-        // } else {
-        //     return redirect()->to(base_url('/Patient/login'));
-        // }
-        //
-    }
-    
 
     public function login()
     {
@@ -31,6 +18,8 @@ class Patient extends BaseController
     {
         return view('Frontend/Patient/register');
     }
+
+
 
     # Fonction de connexion au dashboard patient --------------
 
@@ -47,6 +36,7 @@ class Patient extends BaseController
 
         if ($user) {
             if (password_verify($mdp, $user['mdp'])) {
+
 
                 session()->set('patient', $user);
 
@@ -65,21 +55,20 @@ class Patient extends BaseController
 
     public function dash()
     {
-         if(isset(session('patient')['id']))
-        {
+        if (isset(session('patient')['id'])) {
             $patients = new PatientModel();
             $data['patient'] = $patients->findAll();
-           return view('Frontend/Patient/dash', $data);
-        }
-        else{
+            return view('Frontend/Patient/dash', $data);
+        } else {
             return redirect()->to(base_url('/Patient'));
         }
     }
 
-# ----- Enregistrement des informations du patient dans la base de données--------------
+    # ----- Enregistrement des informations du patient dans la base de données--------------
 
     public function savePatient()
     {
+
         $rules = [
             'nom' => 'required|min_length[3]|max_length[20]',
             'prenom' => 'required|min_length[3]|max_length[20]',
@@ -90,87 +79,106 @@ class Patient extends BaseController
             'password' => 'required|min_length[8]|max_length[255]',
             'confirm_password' => 'required|matches[password]',
         ];
-    
+
         $messages = [
             'nom' => [
                 'required' => 'Le champ nom est requis.',
                 'min_length' => 'Le nom doit avoir au moins 3 caractères.',
                 'max_length' => 'Le nom ne peut pas dépasser 20 caractères.'
-             ],
+            ],
             'prenom' => [
                 'required' => 'Le champ prenom est requis.',
                 'min_length' => 'Le prenom doit avoir au moins 3 caractères.',
                 'max_length' => 'Le prenom ne peut pas dépasser 20 caractères.'
-             ],
+            ],
 
             'date' => [
                 'required' => 'Le champ date est requis.',
-             ],
+            ],
 
             'sexe' => [
                 'required' => 'Le champ sexe est requis.',
-             ],
-             
+            ],
+
             'tel' => [
                 'required' => 'Le champ tel est requis.',
                 'min_length' => 'Le tel doit avoir au moins 8 caractères.',
                 'max_length' => 'Le tel ne peut pas dépasser 10 caractères.'
-             ],
+            ],
 
             'email' => [
                 'required' => 'Le champ email est requis et doit être valide.',
-             ],
+            ],
 
             'password' => [
                 'required' => 'Le champ password est requis.',
                 'min_length' => 'Le password doit avoir au moins 8 caractères.',
                 'max_length' => 'Le password ne peut pas dépasser 20 caractères.'
-             ],
+            ],
 
             'confirm_password' => [
                 'required' => 'Le champ confirm_password est requis.',
                 'min_length' => 'Le confirm_password doit avoir au moins 8 caractères.',
                 'max_length' => 'Le confirm_password ne peut pas dépasser 20 caractères.'
-             ],
+            ],
         ];
-    
+
         if (!$this->validate($rules, $messages)) {
             return view('Frontend/Patient/register', ['validation' => $this->validator]);
-        }
-        else {
+        } else {
             $patients = new PatientModel();
+
+            $nom = $this->request->getVar('nom');
+            $prenom = $this->request->getVar('prenom');
+            $date_de_naissance = $this->request->getVar('date');
+            $sexe = $this->request->getVar('sexe');
+            $telephone = $this->request->getVar('tel');
+            $email = $this->request->getVar('email');
+            $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
+
+
+            // Génère QR Code
+            $qrData = "Nom: $nom\nPrenom: $prenom\nDate de naissance: $date_de_naissance\nSexe: $sexe\nTelephone: $telephone\nEmail: $email";
+
+            $writer = new \Endroid\QrCode\Writer\PngWriter();
+            $qrCode = new \Endroid\QrCode\QrCode($qrData);
+            $result = $writer->write($qrCode);
+            $png = $result->getString();
+
+            $dataUri = 'data:image/png;base64,' . base64_encode($png);
             $token = bin2hex(random_bytes(20));
             $data = [
-                'nom' => $this->request->getVar('nom'),
-                'prenom' => $this->request->getVar('prenom'),
-                'date_de_naissance' => $this->request->getVar('date'),
-                'sexe' => $this->request->getVar('sexe'),
-                'telephone' => $this->request->getVar('tel'),
-                'email' => $this->request->getVar('email'),
-                'mdp' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+                'nom' => $nom,
+                'prenom' => $prenom,
+                'date_de_naissance' => $date_de_naissance,
+                'sexe' => $sexe,
+                'telephone' => $telephone,
+                'email' => $email,
+                'mdp' => $mdp,
                 'lien' => $token,
-                ];
+                'qr_image' => $dataUri
+            ];
         }
 
-        $message = "Merci de votre inscription. Activer votre compte".anchor(uri:'/Patient/activate/'.$data['lien'], title:' Activer maintenant', attributes:'');
-        
+        $message = "Merci de votre inscription. Activer votre compte" . anchor(uri: 'Patient/activate/' . $data['lien'], title: ' Activer maintenant', attributes: '');
+
         $query = $patients->insert($data);
-        
+
         if (!$query) {
-            return redirect()->back('/Patient/register')->with("fail", "quelque chose s'est mal pasesée");
-        }else{
+            return redirect()->back('/Patient/register')->with("fail", "quelque chose s'est mal passée");
+        } else {
             $to = $this->request->getVar('email');
             $email = \Config\Services::email();
             $email->setTo($to);
-            $email->setFrom('tcheregnimin.tuo@uvci.edu.ci');  
+            $email->setFrom('tcheregnimin.tuo@uvci.edu.ci');
             $email->setSubject('Confirmation inscription');
-            $email->setMessage($message);  
+            $email->setMessage($message);
             $email->send();
-            $data = $email->printDebugger(['headers']);
-                print_r($data); 
-            }
-            //$this->sendConfirmationEmail($data['email']);
-            return redirect()->to(base_url('/Patient/register'))->with("success", "Votre compte a été crée avec succés");
+            $dataEmail = $email->printDebugger(['headers']);
+            print_r($dataEmail);
+        }
+        return redirect()->to(base_url('/Patient/register'))->with("success", "Votre compte a bien été créé");
+        // return view('Frontend/Patient/register', $data);
     }
 
 
@@ -182,51 +190,35 @@ class Patient extends BaseController
             $data['status'] = 1;
             $activatePatient = $patient->update($verifToken[0]['id'], $data);
             if ($activatePatient) {
-                return redirect()->to('/Patient')->with('success','Votre compte a été activé, vous pouvez maintenant vous connecter.');
+                return redirect()->to('/Patient')->with('success', 'Votre compte a été activé, vous pouvez maintenant vous connecter.');
             }
-        }
-        else{
+        } else {
             echo 'Not found';
         }
     }
 
-    
+
     public function profile()
     {
-        if(isset(session('patient')['id']))
-        {
+        if (isset(session('patient')['id'])) {
             return view('/Patient/page-profile');
-        }else{
+        } else {
             return redirect()->to(base_url('/Patient'));
         }
     }
 
 
-    public function logout(){
-        if(isset(session('patient')['id']))
-        {
+    public function logout()
+    {
+        if (isset(session('patient')['id'])) {
             session()->destroy();
             return redirect()->to(base_url('/Patient'));
-        }
-        else{
+        } else {
             return redirect()->to(base_url('/Patient'));
         }
-
     }
 
-    public function barcode_qrcode(){
-        $mpdf = new \Mpdf\Mpdf([
-            'mode' => 'utf-8',
-            'format' => [279, 216],
-            'orientation' => 'P'
-            ]);
-            $html = file_get_contents("http://localhost:8000/api/barcode");
-            $id = session('patient')["id"];
-            $patient = new PatientModel();
-            $infos=$patient->where('id',$id)->first();
-            $view = view('Patient/QRCodeBarcode', compact('infos'));
-            $filename = "QRCODEBARCODE".time().'.pdf';
-            $mpdf->WriteHTML($view);
-            $mpdf->Output($filename,"I"); 
+    public function barcode_qrcode()
+    {
     }
 }
