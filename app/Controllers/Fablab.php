@@ -23,13 +23,11 @@ class Fablab extends BaseController
 
     public function dash()
     {
-         if(isset(session('fablab')['id']))
-        {
+        if (isset(session('fablab')['id'])) {
             $fablab = new FablabModel();
             $data['fablab'] = $fablab->findAll();
-           return view('Backend/Fablab/index', $data);
-        }
-        else{
+            return view('Backend/Fablab/index', $data);
+        } else {
             return redirect()->to(base_url('/Fablab'));
         }
     }
@@ -44,7 +42,7 @@ class Fablab extends BaseController
 
 
 
-    
+
     public function register()
     {
         return view('Backend/Fablab/register');
@@ -75,21 +73,18 @@ class Fablab extends BaseController
                 return redirect()->to(base_url('/Fablab/login'));
             }
         } else {
-
-
-        
         }
     }
 
     # ------------ Session du dashboard patient -------------------
 
 
-# ----- Enregistrement des informations du fablab dans la base de données--------------
+    # ----- Enregistrement des informations du fablab dans la base de données--------------
 
     public function saveFablab()
     {
 
-       
+
         $rules = [
             'nom' => 'required|min_length[3]|max_length[20]',
             'prenom' => 'required|min_length[3]|max_length[20]',
@@ -98,7 +93,7 @@ class Fablab extends BaseController
             'mdp' => 'required|min_length[8]|max_length[255]',
             'mdp_c' => 'required|matches[mdp]',
         ];
-    
+
         $messages = [
             'nom' => [
                 'required' => 'Le champ nom est requis.',
@@ -133,11 +128,10 @@ class Fablab extends BaseController
             ],
 
         ];
-    
+
         if (!$this->validate($rules, $messages)) {
             return view('Backend/Fablab/register', ['validation' => $this->validator]);
-        }
-        else {
+        } else {
             $fablab = new FablabModel();
             $token = bin2hex(random_bytes(20));
             $data = [
@@ -147,28 +141,62 @@ class Fablab extends BaseController
                 'email' => $this->request->getVar('email'),
                 'mdp' => password_hash($this->request->getVar('mdp'), PASSWORD_BCRYPT),
                 'lien' => $token,
-                ];
+            ];
         }
 
-        $message = "Merci de votre inscription. Activer votre compte".anchor(uri:'/Fablab/activate/'.$data['lien'], title:' Activer maintenant', attributes:'');
-        
+        /*   $message = "Merci de votre inscription. Activer votre compte".anchor(uri:'/Fablab/activate/'.$data['lien'], title:' Activer maintenant', attributes:''); */
+
+
+        $message = "<!DOCTYPE html>" .
+            "<html lang='fr'>" .
+            "<head>" .
+            "<meta charset='UTF-8'>" .
+            "<meta name='viewport' content='width=device-width, initial-scale=1.0'>" .
+            "<title>Mail SIGIM</title>" .
+            "</head>" .
+            "<body style='background-color:white;font-family:verdana;width:100%;display:flex;justify-content:center;'>" .
+            "<section style='border:2px solid #dbdbdb;text-align:center;display:flex;justify-content:center;max-width:400px;'>" .
+            "<div>" .
+            "<div class='header'>" .
+            "<img src='../assets/images/sigim.png'>" .
+            "</div>" .
+            "<div class='body-section'>" .
+            "<div class='title-section' style='font-size:26px;font-weight:bolder;margin:16px 0;text-transform:capitalize'>" . "felicitaion" . "</div>" .
+            "<hr style='width: 50%;'>" .
+            "<div class='body-section-content' style='padding:16px;font-style:justify'>" .
+            "Suite à votre requete d'integrer la famille" . "<b>" . "<a href='https://www.youtube.com' style='text-transform: underline;'>" . "SIGIM" . "</a>" . "</b>" . "nous venons par ce mail vous informer que votre compte a bien été crée avec succes !! " . "<br>" .
+            "Vos informations de connexion ce trouve ci-deçous :" .
+            "<div style='font-weight:bold;'>" . "lien de connexion :" . "<span>" . "<a href='https://www.youtube.com'>" . "lien.com" . "</a>" . "</span>" . "</div>" .
+            "<div style='font-weight:bold;'>" . "Email :" . "<span>" .$this->request->getVar('email'). "</span>" . "</div>" .
+            "<div style='font-weight:bold;'>" . "Mot de passe :" . "<span>" . $this->request->getVar('mdp') ."</span>" . "</div>" .
+            "</div>" .
+            "</div>" .
+            "<div class='footer' style='background-color:#004aad;height:40px;display:flex;justify-content:center;align-items:center'>" .
+            "<div style='font-style:italic;color:white;font-size:smaller;font-weight:bold;'>" . "@ Tout droit reservé SIGIM" . "</div>" .
+            "</div>" .
+            "</div>" .
+            "</section>" .
+            "</body>" .
+            "</html>";
+
+
         $query = $fablab->insert($data);
-        
-       if (!$query) {
+
+        if (!$query) {
             return redirect()->back('/Fablab/register')->with("fail", "quelque chose s'est mal pasesée");
-        }else{
+        } else {
             $to = $this->request->getVar('email');
             $email = \Config\Services::email();
             $email->setTo($to);
-            $email->setFrom('pli.dago@uvci.edu.ci');  
+            $email->setFrom('pli.dago@uvci.edu.ci');
             $email->setSubject('Confirmation inscription');
-            $email->setMessage($message);  
+            $email->setMessage($message);
             $email->send();
             $data = $email->printDebugger(['headers']);
-                print_r($data); 
-            }
-            //$this->sendConfirmationEmail($data['email']);
-            return redirect()->to(base_url('/Fablab/register'))->with("success", "Votre compte a été crée avec succés");  
+            print_r($data);
+        }
+        //$this->sendConfirmationEmail($data['email']);
+        return redirect()->to(base_url('/Fablab/register'))->with("success", "Votre compte a été crée avec succés");
     }
 
 
@@ -180,35 +208,31 @@ class Fablab extends BaseController
             $data['status'] = 1;
             $activateFablab = $fablab->update($verifToken[0]['id'], $data);
             if ($activateFablab) {
-                return redirect()->to('/Fablab')->with('success','Votre compte a été activé, vous pouvez maintenant vous connecter.');
+                return redirect()->to('/Fablab')->with('success', 'Votre compte a été activé, vous pouvez maintenant vous connecter.');
             }
-        }
-        else{
+        } else {
             echo 'Not found';
         }
     }
 
-    
+
     public function profile()
     {
-        if(isset(session('fablab')['id']))
-        {
+        if (isset(session('fablab')['id'])) {
             return view('/Fablab/page-profile');
-        }else{
+        } else {
             return redirect()->to(base_url('/Fablab'));
         }
     }
 
 
-    public function logout(){
-        if(isset(session('fablab')['id']))
-        {
+    public function logout()
+    {
+        if (isset(session('fablab')['id'])) {
             session()->destroy();
             return redirect()->to(base_url('/Fablab'));
-        }
-        else{
+        } else {
             return redirect()->to(base_url('/Fablab'));
         }
-
     }
 }

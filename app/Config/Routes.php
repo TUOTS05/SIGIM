@@ -8,8 +8,6 @@ use CodeIgniter\Router\RouteCollection;
 
 
 
-
-
   // la page d'accueil du site sigim----------------------
 
 $routes->get('/', 'Home::index');
