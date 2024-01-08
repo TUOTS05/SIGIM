@@ -7,12 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 
+// la page d'accueil du site sigim----------------------
 
-  // la page d'accueil du site sigim----------------------
+$routes->get('/', 'Alert_notif::index');
+$routes->post('/Alert_notif/save', 'Alert_notif::save');
+$routes->get('/check_notification', 'Alert_notif::view_my_notif');
 
-$routes->get('/', 'Home::index');
-$routes->get('/contact','Home::contact');
-$routes->get('/apropo','Home::apropo');
+
+$routes->get('/contact', 'Home::contact');
+$routes->get('/apropo', 'Home::apropo');
+$routes->get('/check_notifications', 'Alert_notif::view_my_notif');
 
 $routes->get('/Patient', 'Patient::login');
 $routes->get('/Patient/register', 'Patient::register');

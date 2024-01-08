@@ -1,15 +1,12 @@
-
-
 <!-- Top Bar Start -->
-<div class="topbar">            
+<div class="topbar">
     <!-- Navbar -->
-    <nav class="navbar-custom" id="navbar-custom">    
+    <nav class="navbar-custom" id="navbar-custom">
         <ul class="list-unstyled topbar-nav float-end mb-0">
             <li class="dropdown">
-                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="false" aria-expanded="false">
-                <img src="assets/images/flags/us_flag.jpg" alt="" class="thumb-xxs rounded">
-            </a>
+                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="assets/images/flags/us_flag.jpg" alt="" class="thumb-xxs rounded">
+                </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#"><img src="assets/images/flags/us_flag.jpg" alt="" height="15" class="me-2">English</a>
                     <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="15" class="me-2">Spanish</a>
@@ -17,17 +14,16 @@
                     <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="15" class="me-2">French</a>
                 </div>
             </li><!--end topbar-language-->
-            
+
             <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-haspopup="false" aria-expanded="false">
+                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="ti ti-mail"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
-                
+
                     <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
                         Emails <span class="badge bg-soft-primary badge-pill">3</span>
-                    </h6> 
+                    </h6>
                     <div class="notification-menu" data-simplebar>
                         <!-- item-->
                         <a href="#" class="dropdown-item py-3">
@@ -103,84 +99,31 @@
             </li>
 
             <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-haspopup="false" aria-expanded="false">
+
+
+                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="ti ti-bell"></i>
                     <span class="alert-badge"></span>
                 </a>
+                <audio id="notificationSound" autoplay="true">
+                    <source src="emergency-alarm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+
+
                 <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
-                
-                    <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
-                        Notifications <span class="badge bg-soft-primary badge-pill">2</span>
-                    </h6> 
-                    <div class="notification-menu" data-simplebar>
-                        <!-- item-->
-                        <a href="#" class="dropdown-item py-3">
-                            <small class="float-end text-muted ps-2">2 min ago</small>
-                            <div class="media">
-                                <div class="avatar-md bg-soft-primary">
-                                    <i class="ti ti-chart-arcs"></i>
-                                </div>
-                                <div class="media-body align-self-center ms-2 text-truncate">
-                                    <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
-                                    <small class="text-muted mb-0">Dummy text of the printing and industry.</small>
-                                </div><!--end media-body-->
-                            </div><!--end media-->
-                        </a><!--end-item-->
-                        <!-- item-->
-                        <a href="#" class="dropdown-item py-3">
-                            <small class="float-end text-muted ps-2">10 min ago</small>
-                            <div class="media">
-                                <div class="avatar-md bg-soft-primary">
-                                    <i class="ti ti-device-computer-camera"></i>
-                                </div>
-                                <div class="media-body align-self-center ms-2 text-truncate">
-                                    <h6 class="my-0 fw-normal text-dark">Meeting with designers</h6>
-                                    <small class="text-muted mb-0">It is a long established fact that a reader.</small>
-                                </div><!--end media-body-->
-                            </div><!--end media-->
-                        </a><!--end-item-->
-                        <!-- item-->
-                        <a href="#" class="dropdown-item py-3">
-                            <small class="float-end text-muted ps-2">40 min ago</small>
-                            <div class="media">
-                                <div class="avatar-md bg-soft-primary">                                                    
-                                    <i class="ti ti-diamond"></i>
-                                </div>
-                                <div class="media-body align-self-center ms-2 text-truncate">
-                                    <h6 class="my-0 fw-normal text-dark">UX 3 Task complete.</h6>
-                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                </div><!--end media-body-->
-                            </div><!--end media-->
-                        </a><!--end-item-->
-                        <!-- item-->
-                        <a href="#" class="dropdown-item py-3">
-                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                            <div class="media">
-                                <div class="avatar-md bg-soft-primary">
-                                    <i class="ti ti-drone"></i>
-                                </div>
-                                <div class="media-body align-self-center ms-2 text-truncate">
-                                    <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
-                                    <small class="text-muted mb-0">It is a long established fact that a reader.</small>
-                                </div><!--end media-body-->
-                            </div><!--end media-->
-                        </a><!--end-item-->
-                        <!-- item-->
-                        <a href="#" class="dropdown-item py-3">
-                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                            <div class="media">
-                                <div class="avatar-md bg-soft-primary">
-                                    <i class="ti ti-users"></i>
-                                </div>
-                                <div class="media-body align-self-center ms-2 text-truncate">
-                                    <h6 class="my-0 fw-normal text-dark">Payment Successfull</h6>
-                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                </div><!--end media-body-->
-                            </div><!--end media-->
-                        </a><!--end-item-->
-                    </div>
-                    <!-- All-->
+
+
+
+                   <div id="notifications">
+
+                   </div>
+                   
+                    
+
+
+
                     <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
                         View all <i class="fi-arrow-right"></i>
                     </a>
@@ -188,14 +131,12 @@
             </li>
 
             <li class="dropdown">
-                <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-haspopup="false" aria-expanded="false">
+                <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <div class="d-flex align-items-center">
                         <img src="assets/images/users/user-4.jpg" alt="profile-user" class="rounded-circle me-2 thumb-sm" />
                         <div>
                             <small class="d-none d-md-block font-11">Admin</small>
-                            <span class="d-none d-md-block fw-semibold font-12">Maria Gibson <i
-                                    class="mdi mdi-chevron-down"></i></span>
+                            <span class="d-none d-md-block fw-semibold font-12">Maria Gibson <i class="mdi mdi-chevron-down"></i></span>
                         </div>
                     </div>
                 </a>
@@ -210,23 +151,53 @@
                 <a class="nav-link arrow-none nav-icon offcanvas-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#Appearance" role="button" aria-controls="Rightbar">
                     <i class="ti ti-settings ti-spin"></i>
                 </a>
-            </li>   
+            </li>
         </ul><!--end topbar-nav-->
 
-        <ul class="list-unstyled topbar-nav mb-0">                        
+        <ul class="list-unstyled topbar-nav mb-0">
             <li>
                 <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
                     <i class="ti ti-menu-2"></i>
                 </button>
-            </li> 
+            </li>
             <li class="hide-phone app-search">
                 <form role="search" action="#" method="get">
                     <input type="search" name="search" class="form-control top-search mb-0" placeholder="Type text...">
                     <button type="submit"><i class="ti ti-search"></i></button>
                 </form>
-            </li>                       
+            </li>
         </ul>
     </nav>
     <!-- end navbar-->
 </div>
 <!-- Top Bar End -->
+
+
+
+<script>
+    // Vérifiez les notifications toutes les 5 secondes
+    setInterval(function() {
+        // Faites une requête AJAX pour récupérer les nouvelles notifications
+        fetch("/check_notifications")
+            .then(response => response.text())
+            .then(data => {
+                // Si des notifications sont disponibles, affichez-les
+                if (data !== "") {
+                    // Créez une nouvelle notification
+                  /*  const notification = document.createElement("div");
+                    notification.innerHTML = data;*/
+
+                    // Ajoutez la notification au conteneur de notifications
+                    document.getElementById("notifications").innerHTML = data ;
+
+                    // Jouez le son (en respectant les politiques d'interaction de l'utilisateur)
+                    const audio = document.getElementById("notificationSound");
+                    if (audio.play()) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                }
+            });
+    }, 1000);
+</script>

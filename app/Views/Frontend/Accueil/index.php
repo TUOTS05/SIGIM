@@ -1,34 +1,67 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mail SIGIM</title>
+   <title>Document</title>
 </head>
 
-<body style="background-color: white;font-family:verdana;">
-   <section class="" style="border:2px solid #dbdbdb;text-align:center;display:flex;justify-content:center;max-width:400px;">
-      <div class="">
-         <div class="header" style="">
-            <img src="../assets/images/sigim.png" alt="" style="">
-         </div>
-         <div class="body-section" style="">
-            <div class="title-section" style="font-size:26px;font-weight:bolder;margin:16px 0;text-transform:capitalize">felicitaion</div>
-            <hr style="width: 50%;">
-            <div class="body-section-content" style="padding:16px;font-style:justify">
-               Suite à votre requete d'integrer la famille <b><a href="https://www.youtube.com" style="text-transform: underline;">SIGIM</a></b> nous venons par ce mail vous informer que votre compte a bien été crée avec succes !! <br>
-               Vos informations de connexion ce trouve ci-deçous :
-               <div style="font-weight:bold;">lien de connexion : <span><a href="https://www.youtube.com">lien.com</a></span></div>
-               <div style="font-weight:bold;">Email : <span></span></div>
-               <div style="font-weight:bold;">Mot de passe : <span></span></div>
-            </div>
-         </div>
-         <div class="footer" style="background-color:#004aad;height:40px;display:flex;justify-content:center;align-items:center">
-            <div style="font-style:italic;color:white;font-size:smaller;font-weight:bold;">@ Tout droit reservé SIGIM</div>
-         </div>
-      </div>
-   </section>
-</body>
+<body>
 
+
+   <div align="center">
+
+      <h1>systeme d'alerte !</h1>
+
+  <!--    <form action="<php?= # base_url('/Alert_notif/save'); ?>" method="post">
+         <select name="id_dest" id="dest">
+            <option value="0">Aucun</option>
+            <option value="1">Mr Souley Diang</option>
+         </select>
+         <button type="submit">Signaler</button>
+      </form>    -->
+    
+
+  <div id="notifications"></div>
+
+  <audio id="notificationSound" autoplay="true" >
+  <source src="emergency-alarm.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+  
+
+   </div>
+
+
+   <script>
+      // Vérifiez les notifications toutes les 5 secondes
+setInterval(function() {
+  // Faites une requête AJAX pour récupérer les nouvelles notifications
+  fetch("/check_notifications")
+    .then(response => response.text())
+    .then(data => {
+      // Si des notifications sont disponibles, affichez-les
+      if (data !== "") {
+        // Créez une nouvelle notification
+        const notification = document.createElement("div");
+        notification.textContent = data;
+
+        // Ajoutez la notification au conteneur de notifications
+        document.getElementById("notifications").appendChild(notification);
+
+        // Jouez le son (en respectant les politiques d'interaction de l'utilisateur)
+        const audio = document.getElementById("notificationSound");
+        if (audio.play()) {
+          audio.play();
+        } else {
+         audio.pause();
+        }
+      }
+    });
+}, 5000);
+   </script>
+
+</body>
 </html>
